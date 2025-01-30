@@ -223,7 +223,7 @@ nav {
     padding: 80px 0;
     background: white;
     position: relative;
-    margin-top: -80px;
+    margin-top: -120px;
     z-index: 2;
 }
 
@@ -239,11 +239,19 @@ nav {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    transform: translateY(0);
+    opacity: 0;
+}
+
+.stat-card.animate {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .stat-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
 .stat-icon {
@@ -269,9 +277,30 @@ nav {
     font-weight: 700;
 }
 
+.stat-content .number {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.stat-content .number.animate {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
+
 .stat-content p {
     color: var(--gray-color);
     font-size: 1.1rem;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.stat-card.animate .stat-content p {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s;
 }
 
 /* About Section */
