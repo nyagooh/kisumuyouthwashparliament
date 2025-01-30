@@ -220,11 +220,14 @@ nav {
 
 /* Stats Section */
 .stats {
-    padding: 80px 0;
-    background: white;
+    padding: 0;
+    background: transparent;
     position: relative;
-    margin-top: -120px;
     z-index: 2;
+}
+
+.stats .container {
+    margin-top: -100px;
 }
 
 .stats-grid {
@@ -235,9 +238,9 @@ nav {
 
 .stat-card {
     background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     text-align: center;
     transition: all 0.3s ease;
     transform: translateY(0);
@@ -251,30 +254,31 @@ nav {
 
 .stat-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
 }
 
 .stat-icon {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     background: var(--light-color);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1rem;
+    margin: 0 auto 1.5rem;
 }
 
 .stat-icon i {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--primary-color);
 }
 
 .stat-content h3 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: var(--primary-color);
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     font-weight: 700;
+    line-height: 1;
 }
 
 .stat-content .number {
@@ -291,7 +295,7 @@ nav {
 
 .stat-content p {
     color: var(--gray-color);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     opacity: 0;
     transform: translateY(10px);
     transition: all 0.3s ease;
@@ -301,6 +305,36 @@ nav {
     opacity: 1;
     transform: translateY(0);
     transition-delay: 0.2s;
+}
+
+@media (max-width: 768px) {
+    .stats .container {
+        margin-top: -60px;
+        padding: 0 1rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .stat-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .stat-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .stat-content p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* About Section */
