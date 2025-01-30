@@ -238,7 +238,8 @@ nav {
 
 .stat-card {
     background: rgba(255, 255, 255, 0.95);
-    padding: 2rem 1.5rem;
+    padding: 3rem 1.5rem;
+    min-height: 280px;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     text-align: center;
@@ -246,6 +247,9 @@ nav {
     transform: translateY(0);
     opacity: 0;
     backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .stat-card.animate {
@@ -267,13 +271,21 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1rem;
+    margin: 0 auto 1.5rem;
 }
 
 .stat-icon i {
     font-size: 1.5rem;
     color: var(--primary-color);
     opacity: 0.9;
+}
+
+.stat-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .stat-content h3 {
@@ -323,7 +335,8 @@ nav {
     }
 
     .stat-card {
-        padding: 1.5rem 1rem;
+        padding: 2rem 1rem;
+        min-height: 220px;
     }
 
     .stat-content h3 {
@@ -338,6 +351,10 @@ nav {
 @media (max-width: 480px) {
     .stats-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .stat-card {
+        min-height: 200px;
     }
 }
 
