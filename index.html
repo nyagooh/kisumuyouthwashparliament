@@ -6,6 +6,7 @@
     <title>Kisumu Youth WASH Parliament</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,6 +21,7 @@
                 <a href="#about">About</a>
                 <a href="#programs">Programs</a>
                 <a href="#impact">Impact</a>
+                <a href="#events">Events</a>
                 <a href="#contact">Contact</a>
                 <a href="#donate" class="donate-btn">Become a Donor</a>
             </div>
@@ -131,21 +133,116 @@
                 <h2>Our Impact</h2>
                 <p>Real stories of transformation in our communities</p>
             </div>
-            <div class="impact-grid">
-                <div class="impact-story">
-                    <img src="https://placehold.co/400x300" alt="Community Impact">
-                    <div class="story-content">
-                        <h3>Community Success</h3>
-                        <p>How we helped transform water access in local communities.</p>
-                        <a href="#" class="read-more">Read More</a>
+            <div class="swiper impact-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="impact-story">
+                            <img src="https://placehold.co/400x300" alt="Community Impact">
+                            <div class="story-content">
+                                <h3>Clean Water Access</h3>
+                                <p>Provided clean water access to over 500 households in rural Kisumu.</p>
+                                <a href="#" class="read-more">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="impact-story">
+                            <img src="https://placehold.co/400x300" alt="School Program">
+                            <div class="story-content">
+                                <h3>School Sanitation</h3>
+                                <p>Improved sanitation facilities in 10 local schools, benefiting 2000+ students.</p>
+                                <a href="#" class="read-more">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="impact-story">
+                            <img src="https://placehold.co/400x300" alt="Community Education">
+                            <div class="story-content">
+                                <h3>Hygiene Education</h3>
+                                <p>Conducted hygiene awareness programs reaching 15 communities.</p>
+                                <a href="#" class="read-more">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="impact-story">
+                            <img src="https://placehold.co/400x300" alt="Infrastructure">
+                            <div class="story-content">
+                                <h3>Infrastructure Development</h3>
+                                <p>Built 5 community water points serving 1000+ residents daily.</p>
+                                <a href="#" class="read-more">Read More</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="impact-story">
-                    <img src="https://placehold.co/400x300" alt="School Program">
-                    <div class="story-content">
-                        <h3>School Program</h3>
-                        <p>Bringing clean water and sanitation to local schools.</p>
-                        <a href="#" class="read-more">Read More</a>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Gallery Section -->
+    <section id="events" class="events">
+        <div class="container">
+            <div class="section-header">
+                <h2>Event Gallery</h2>
+                <p>Highlights from our community initiatives and events</p>
+            </div>
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="workshops">Workshops</button>
+                <button class="filter-btn" data-filter="community">Community</button>
+                <button class="filter-btn" data-filter="projects">Projects</button>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item workshops">
+                    <img src="https://placehold.co/400x300" alt="Workshop">
+                    <div class="gallery-overlay">
+                        <h3>Hygiene Workshop</h3>
+                        <p>Community education session</p>
+                        <span class="event-date">Jan 2025</span>
+                    </div>
+                </div>
+                <div class="gallery-item community">
+                    <img src="https://placehold.co/400x300" alt="Community Event">
+                    <div class="gallery-overlay">
+                        <h3>Community Meeting</h3>
+                        <p>Planning session with local leaders</p>
+                        <span class="event-date">Dec 2024</span>
+                    </div>
+                </div>
+                <div class="gallery-item projects">
+                    <img src="https://placehold.co/400x300" alt="Water Project">
+                    <div class="gallery-overlay">
+                        <h3>Water Point Installation</h3>
+                        <p>New clean water access point</p>
+                        <span class="event-date">Nov 2024</span>
+                    </div>
+                </div>
+                <div class="gallery-item workshops">
+                    <img src="https://placehold.co/400x300" alt="Training">
+                    <div class="gallery-overlay">
+                        <h3>WASH Training</h3>
+                        <p>Youth leadership program</p>
+                        <span class="event-date">Oct 2024</span>
+                    </div>
+                </div>
+                <div class="gallery-item community">
+                    <img src="https://placehold.co/400x300" alt="Outreach">
+                    <div class="gallery-overlay">
+                        <h3>Community Outreach</h3>
+                        <p>Door-to-door awareness campaign</p>
+                        <span class="event-date">Sep 2024</span>
+                    </div>
+                </div>
+                <div class="gallery-item projects">
+                    <img src="https://placehold.co/400x300" alt="Sanitation">
+                    <div class="gallery-overlay">
+                        <h3>Sanitation Facility</h3>
+                        <p>New facility construction</p>
+                        <span class="event-date">Aug 2024</span>
                     </div>
                 </div>
             </div>
@@ -216,6 +313,7 @@
                     <a href="#about">About Us</a>
                     <a href="#programs">Programs</a>
                     <a href="#impact">Impact</a>
+                    <a href="#events">Events</a>
                     <a href="#contact">Contact</a>
                 </div>
                 <div class="footer-social">
@@ -233,6 +331,7 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
