@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisumu Youth WASH Parliament</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0066cc',
+                        secondary: '#004d99',
+                        accent: '#00264d',
+                        text: '#333333',
+                        light: '#f8f9fa',
+                        gray: '#6c757d'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="font-poppins text-text">
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="logo">
+                <h1 class="text-primary text-2xl font-bold">KYWP</h1>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-text hover:text-primary transition-colors duration-300">Home</a>
+                <a href="#about" class="text-text hover:text-primary transition-colors duration-300">About</a>
+                <a href="#programs" class="text-text hover:text-primary transition-colors duration-300">Programs</a>
+                <a href="#impact" class="text-text hover:text-primary transition-colors duration-300">Impact</a>
+                <a href="#events" class="text-text hover:text-primary transition-colors duration-300">Events</a>
+                <a href="#contact" class="text-text hover:text-primary transition-colors duration-300">Contact</a>
+            </div>
+            <a href="#donate" class="hidden md:inline-block px-6 py-2 bg-primary text-white rounded-md hover:bg-secondary transition-all duration-300 hover:-translate-y-0.5">Donate</a>
+            <button class="md:hidden text-text hover:text-primary">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen bg-gradient-to-r from-primary to-secondary text-white flex items-center">
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">Empowering Youth for Clean Water & Sanitation</h1>
+                <p class="text-xl mb-8 opacity-90">Join us in our mission to ensure access to clean water and proper sanitation for all communities in Kisumu.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#programs" class="inline-block px-8 py-4 bg-white text-primary rounded-md font-medium transition-all duration-300 hover:bg-light hover:-translate-y-0.5">Our Programs</a>
+                    <a href="#donate" class="inline-block px-8 py-4 bg-transparent text-white border-2 border-white rounded-md font-medium transition-all duration-300 hover:bg-white hover:text-primary">Support Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="relative z-10 -mt-24">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="bg-white/90 backdrop-blur-sm p-8 rounded-lg shadow-xl text-center transform transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:bg-white">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-primary text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-bold mb-2 text-accent"><span class="number" data-target="1000">0</span>+</h3>
+                        <p class="text-gray">People Impacted</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white/90 backdrop-blur-sm p-8 rounded-lg shadow-xl text-center transform transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:bg-white">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-project-diagram text-primary text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-bold mb-2 text-accent"><span class="number" data-target="50">0</span>+</h3>
+                        <p class="text-gray">Projects Completed</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white/90 backdrop-blur-sm p-8 rounded-lg shadow-xl text-center transform transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:bg-white">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-home text-primary text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-bold mb-2 text-accent"><span class="number" data-target="20">0</span>+</h3>
+                        <p class="text-gray">Communities Served</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white/90 backdrop-blur-sm p-8 rounded-lg shadow-xl text-center transform transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:bg-white">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-hands-helping text-primary text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-bold mb-2 text-accent"><span class="number" data-target="100">0</span>+</h3>
+                        <p class="text-gray">Volunteers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-accent mb-4">About Us</h2>
+                <p class="text-gray text-lg max-w-3xl mx-auto">Learn about our mission and how we're making a difference in Kisumu's water and sanitation landscape.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="about-image">
+                    <img src="https://placehold.co/600x400" alt="About KYWP" class="w-full rounded-lg shadow-lg">
+                </div>
+                <div class="space-y-6">
+                    <h3 class="text-3xl font-bold text-accent">Our Mission</h3>
+                    <p class="text-gray-600">The Kisumu Youth WASH Parliament is dedicated to empowering young people to take leadership roles in addressing water, sanitation, and hygiene challenges in their communities.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <i class="fas fa-check-circle text-primary text-xl"></i>
+                            <p>Advocating for clean water access in underserved areas</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fas fa-check-circle text-primary text-xl"></i>
+                            <p>Promoting sustainable sanitation practices</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fas fa-check-circle text-primary text-xl"></i>
+                            <p>Training youth in WASH leadership</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fas fa-check-circle text-primary text-xl"></i>
+                            <p>Building partnerships for community development</p>
+                        </div>
+                    </div>
+                    <a href="#contact" class="inline-block px-8 py-4 bg-primary text-white rounded-md font-medium transition-all duration-300 hover:bg-secondary hover:-translate-y-0.5 mt-6">Join Our Mission</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-24">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-accent mb-4">Our Programs</h2>
+                <p class="text-gray text-lg max-w-3xl mx-auto">Discover how we're making a difference through our various initiatives and programs.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Water Access Program -->
+                <div class="bg-white p-8 rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-tint text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-accent mb-4 text-center">Clean Water Access</h3>
+                    <p class="text-gray-600 text-center">Installing water points and ensuring sustainable access to clean water in communities.</p>
+                </div>
+
+                <!-- Sanitation Program -->
+                <div class="bg-white p-8 rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-toilet text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-accent mb-4 text-center">Sanitation Solutions</h3>
+                    <p class="text-gray-600 text-center">Building and maintaining proper sanitation facilities in schools and communities.</p>
+                </div>
+
+                <!-- Education Program -->
+                <div class="bg-white p-8 rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-graduation-cap text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-accent mb-4 text-center">WASH Education</h3>
+                    <p class="text-gray-600 text-center">Providing comprehensive education on water, sanitation, and hygiene practices.</p>
+                </div>
+
+                <!-- Youth Leadership -->
+                <div class="bg-white p-8 rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-users text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-accent mb-4 text-center">Youth Leadership</h3>
+                    <p class="text-gray-600 text-center">Training young people to become WASH leaders in their communities.</p>
+                </div>
+
+                <!-- Community Outreach -->
+                <div class="bg-white p-8 rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-hands-helping text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-accent mb-4 text-center">Community Outreach</h3>
+                    <p class="text-gray-600 text-center">Engaging with communities to understand and address their WASH needs.</p>
+                </div>
+
+                <!-- Advocacy -->
+                <div class="bg-white p-8 rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-bullhorn text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-accent mb-4 text-center">WASH Advocacy</h3>
+                    <p class="text-gray-600 text-center">Advocating for better WASH policies and infrastructure at local and national levels.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="py-24 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-accent mb-4">Our Impact</h2>
+                <p class="text-gray text-lg max-w-3xl mx-auto">See how our initiatives are transforming communities and improving lives across Kisumu.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Impact Story 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/400x300" alt="Community Impact" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-accent mb-3">Clean Water for Schools</h3>
+                        <p class="text-gray-600 mb-4">Provided clean water access to 10 schools, benefiting over 5,000 students.</p>
+                        <div class="flex items-center text-primary">
+                            <span class="text-sm font-medium">Read More</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Impact Story 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/400x300" alt="Sanitation Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-accent mb-3">Community Sanitation</h3>
+                        <p class="text-gray-600 mb-4">Built 50 sanitation facilities serving over 2,000 community members.</p>
+                        <div class="flex items-center text-primary">
+                            <span class="text-sm font-medium">Read More</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Impact Story 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/400x300" alt="Youth Training" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-accent mb-3">Youth Leadership</h3>
+                        <p class="text-gray-600 mb-4">Trained 100 youth leaders who are now driving change in their communities.</p>
+                        <div class="flex items-center text-primary">
+                            <span class="text-sm font-medium">Read More</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-block px-8 py-4 bg-primary text-white rounded-md font-medium transition-all duration-300 hover:bg-secondary hover:-translate-y-0.5">View All Stories</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Gallery Section -->
+    <section id="events" class="py-24 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-accent mb-4">Event Gallery</h2>
+                <p class="text-gray text-lg max-w-3xl mx-auto">Highlights from our community initiatives and events</p>
+            </div>
+
+            <!-- Event Categories -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button data-filter="all" class="filter-btn active px-6 py-2 rounded-full bg-primary text-white hover:bg-secondary transition-colors duration-300">All Events</button>
+                <button data-filter="workshop" class="filter-btn px-6 py-2 rounded-full bg-white text-primary hover:bg-primary hover:text-white transition-colors duration-300">Workshops</button>
+                <button data-filter="training" class="filter-btn px-6 py-2 rounded-full bg-white text-primary hover:bg-primary hover:text-white transition-colors duration-300">Training</button>
+                <button data-filter="community" class="filter-btn px-6 py-2 rounded-full bg-white text-primary hover:bg-primary hover:text-white transition-colors duration-300">Community Outreach</button>
+                <button data-filter="conference" class="filter-btn px-6 py-2 rounded-full bg-white text-primary hover:bg-primary hover:text-white transition-colors duration-300">Conferences</button>
+            </div>
+
+            <!-- Event Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="events-grid">
+                <!-- Workshop Event -->
+                <div class="event-item bg-white rounded-lg overflow-hidden shadow-lg group hover:-translate-y-1 transition-all duration-300" data-category="workshop">
+                    <div class="relative h-48 overflow-hidden">
+                        <span class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm">Workshop</span>
+                        <img src="workshop-image.jpg" alt="WASH Workshop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 mb-3 text-sm text-gray-500">
+                            <span><i class="far fa-calendar-alt mr-1"></i> Jan 15, 2025</span>
+                            <span><i class="far fa-clock mr-1"></i> 2:00 PM</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-accent mb-2">Water Conservation Workshop</h3>
+                        <p class="text-gray-600 mb-4">Learn practical water conservation techniques and sustainable practices.</p>
+                        <a href="#" class="inline-flex items-center text-primary hover:text-secondary">Learn More <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+
+                <!-- Training Event -->
+                <div class="event-item bg-white rounded-lg overflow-hidden shadow-lg group hover:-translate-y-1 transition-all duration-300" data-category="training">
+                    <div class="relative h-48 overflow-hidden">
+                        <span class="absolute top-4 right-4 bg-secondary text-white px-3 py-1 rounded-full text-sm">Training</span>
+                        <img src="training-image.jpg" alt="Leadership Training" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 mb-3 text-sm text-gray-500">
+                            <span><i class="far fa-calendar-alt mr-1"></i> Feb 1, 2025</span>
+                            <span><i class="far fa-clock mr-1"></i> 10:00 AM</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-accent mb-2">Youth Leadership Training</h3>
+                        <p class="text-gray-600 mb-4">Comprehensive training program for aspiring WASH leaders.</p>
+                        <a href="#" class="inline-flex items-center text-primary hover:text-secondary">Learn More <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+
+                <!-- Community Outreach -->
+                <div class="event-item bg-white rounded-lg overflow-hidden shadow-lg group hover:-translate-y-1 transition-all duration-300" data-category="community">
+                    <div class="relative h-48 overflow-hidden">
+                        <span class="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-sm">Community</span>
+                        <img src="community-image.jpg" alt="Community Event" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-4 mb-3 text-sm text-gray-500">
+                            <span><i class="far fa-calendar-alt mr-1"></i> Feb 15, 2025</span>
+                            <span><i class="far fa-clock mr-1"></i> 9:00 AM</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-accent mb-2">Community WASH Day</h3>
+                        <p class="text-gray-600 mb-4">Join us for a day of community engagement and WASH awareness.</p>
+                        <a href="#" class="inline-flex items-center text-primary hover:text-secondary">Learn More <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+                <button class="px-8 py-4 bg-primary text-white rounded-md font-medium transition-all duration-300 hover:bg-secondary hover:-translate-y-0.5">
+                    Load More Events
+                </button>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!-- Call to Action Section -->
+<section class="py-12 bg-gradient-to-r from-primary to-secondary text-white relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Join Us in Making Clean Water Accessible</h2>
+            <p class="text-lg mb-6 opacity-90">Together, we can ensure everyone has access to clean water and proper sanitation.</p>
+            
+            <div class="grid md:grid-cols-3 gap-4 mb-8">
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 transform hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-hands-helping text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-1">Volunteer</h3>
+                    <p class="opacity-90 text-sm">Join our team of dedicated volunteers.</p>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 transform hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-hand-holding-water text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-1">Donate</h3>
+                    <p class="opacity-90 text-sm">Support our projects and create impact.</p>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 transform hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-users text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-1">Partner</h3>
+                    <p class="opacity-90 text-sm">Help us expand our reach and impact.</p>
+                </div>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                <a href="#contact" class="px-6 py-2 bg-white text-primary rounded-lg font-bold text-sm hover:bg-light transition-all duration-300 hover:-translate-y-0.5">
+                    Get Involved Today
+                </a>
+                <a href="#donate" class="px-6 py-2 bg-transparent border-2 border-white rounded-lg font-bold text-sm hover:bg-white/10 transition-all duration-300 hover:-translate-y-0.5">
+                    Make a Donation
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-accent mb-4">Get In Touch</h2>
+                <p class="text-gray text-lg max-w-3xl mx-auto">Ready to make a difference? Contact us today</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-bold text-accent mb-6">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-4">
+                                <i class="fas fa-map-marker-alt text-primary w-6"></i>
+                                <span class="text-gray-600">Kisumu, Kenya</span>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <i class="fas fa-envelope text-primary w-6"></i>
+                                <a href="mailto:info@kywp.org" class="text-gray-600 hover:text-primary">info@kywp.org</a>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <i class="fas fa-phone text-primary w-6"></i>
+                                <a href="tel:+254700000000" class="text-gray-600 hover:text-primary">+254 700 000 000</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-bold text-accent mb-4">Follow Us</h4>
+                        <div class="flex space-x-6">
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                                <i class="fab fa-facebook-f text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                                <i class="fab fa-linkedin-in text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="space-y-6">
+                    <form>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-primary focus:ring-0 outline-none" placeholder="Your name">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-primary focus:ring-0 outline-none" placeholder="Your email">
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                            <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-primary focus:ring-0 outline-none" placeholder="Message subject">
+                        </div>
+
+                        <div class="mb-6">
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:border-primary focus:ring-0 outline-none resize-none" placeholder="Your message"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg hover:bg-primary/90 transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-accent text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- About -->
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold mb-4">About KYWP</h3>
+                    <p class="text-gray-300 leading-relaxed">Empowering youth to take action on water, sanitation, and hygiene issues in their communities.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-300 hover:text-white transition-colors duration-300">Home</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-white transition-colors duration-300">About Us</a></li>
+                        <li><a href="#programs" class="text-gray-300 hover:text-white transition-colors duration-300">Programs</a></li>
+                        <li><a href="#events" class="text-gray-300 hover:text-white transition-colors duration-300">Events</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Programs -->
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold mb-4">Our Programs</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Water Access</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Sanitation Solutions</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Youth Leadership</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Community Outreach</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold mb-4">Newsletter</h3>
+                    <p class="text-gray-300 mb-4">Subscribe to our newsletter for updates and news.</p>
+                    <form class="space-y-4">
+                        <input type="email" placeholder="Your email address" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:ring-2 focus:ring-white/20 focus:border-white outline-none transition-all duration-300">
+                        <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-secondary transition-all duration-300">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <p class="text-gray-300">&copy; 2025 Kisumu Youth WASH Parliament. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Privacy Policy</a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const eventItems = document.querySelectorAll('.event-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('active', 'bg-primary', 'text-white');
+                        btn.classList.add('bg-white', 'text-primary');
+                    });
+
+                    // Add active class to clicked button
+                    button.classList.remove('bg-white', 'text-primary');
+                    button.classList.add('active', 'bg-primary', 'text-white');
+
+                    const filterValue = button.getAttribute('data-filter');
+
+                    // Show/hide events based on category
+                    eventItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                            // Add animation
+                            item.style.opacity = '0';
+                            item.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'translateY(0)';
+                            }, 100);
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Contact form handling
+        const contactForm = document.querySelector('#contact form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const name = this.querySelector('#name').value;
+                const email = this.querySelector('#email').value;
+                const subject = this.querySelector('#subject').value;
+                const message = this.querySelector('#message').value;
+
+                // Basic form validation
+                if (!name || !email || !subject || !message) {
+                    alert('Please fill in all fields');
+                    return;
+                }
+
+                // Email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    alert('Please enter a valid email address');
+                    return;
+                }
+
+                // Here you would typically send the form data to your server
+                // For now, we'll just show a success message
+                alert('Thank you for your message! We will get back to you soon.');
+                this.reset();
+            });
+        }
+
+        // Newsletter form handling
+        const newsletterForm = document.querySelector('footer form');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const email = this.querySelector('input[type="email"]').value;
+
+                // Basic email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    alert('Please enter a valid email address');
+                    return;
+                }
+
+                // Here you would typically send the email to your server
+                // For now, we'll just show a success message
+                alert('Thank you for subscribing to our newsletter!');
+                this.reset();
+            });
+        }
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('button.md\\:hidden');
+        const mobileMenu = document.querySelector('div.hidden.md\\:flex');
+
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('flex');
+                mobileMenu.classList.toggle('flex-col');
+                mobileMenu.classList.toggle('absolute');
+                mobileMenu.classList.toggle('top-full');
+                mobileMenu.classList.toggle('left-0');
+                mobileMenu.classList.toggle('right-0');
+                mobileMenu.classList.toggle('bg-white');
+                mobileMenu.classList.toggle('shadow-lg');
+                mobileMenu.classList.toggle('p-4');
+                mobileMenu.classList.toggle('space-y-4');
+            });
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
