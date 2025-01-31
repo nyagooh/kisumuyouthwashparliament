@@ -4,83 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kisumu Youth WASH Parliament</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0066cc',
+                        secondary: '#004d99',
+                        accent: '#00264d',
+                        text: '#333333',
+                        light: '#f8f9fa',
+                        gray: '#6c757d'
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
-    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="font-poppins text-text">
     <!-- Header/Navigation -->
-    <header>
-        <nav>
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
             <div class="logo">
-                <h1>KYWP</h1>
+                <h1 class="text-primary text-2xl font-bold">KYWP</h1>
             </div>
-            <div class="nav-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#programs">Programs</a>
-                <a href="#impact">Impact</a>
-                <a href="#events">Events</a>
-                <a href="#contact">Contact</a>
-                <a href="#donate" class="donate-btn">Become a Donor</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-text hover:text-primary transition-colors duration-300">Home</a>
+                <a href="#about" class="text-text hover:text-primary transition-colors duration-300">About</a>
+                <a href="#programs" class="text-text hover:text-primary transition-colors duration-300">Programs</a>
+                <a href="#impact" class="text-text hover:text-primary transition-colors duration-300">Impact</a>
+                <a href="#events" class="text-text hover:text-primary transition-colors duration-300">Events</a>
+                <a href="#contact" class="text-text hover:text-primary transition-colors duration-300">Contact</a>
             </div>
-            <div class="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
+            <a href="#donate" class="hidden md:inline-block px-6 py-2 bg-primary text-white rounded-md hover:bg-secondary transition-all duration-300 hover:-translate-y-0.5">Donate</a>
+            <button class="md:hidden text-text hover:text-primary">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Transforming Lives Through Clean Water</h1>
-            <p>Join us in our mission to provide sustainable water, sanitation, and hygiene solutions to communities in Kisumu</p>
-            <div class="hero-buttons">
-                <a href="#donate" class="primary-btn">Become a Donor</a>
-                <a href="#programs" class="secondary-btn">Our Programs</a>
+    <section id="home" class="relative min-h-screen bg-gradient-to-r from-primary to-secondary text-white flex items-center">
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">Empowering Youth for Clean Water & Sanitation</h1>
+                <p class="text-xl mb-8 opacity-90">Join us in our mission to ensure access to clean water and proper sanitation for all communities in Kisumu.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#programs" class="inline-block px-8 py-4 bg-white text-primary rounded-md font-medium transition-all duration-300 hover:bg-light hover:-translate-y-0.5">Our Programs</a>
+                    <a href="#donate" class="inline-block px-8 py-4 bg-transparent text-white border-2 border-white rounded-md font-medium transition-all duration-300 hover:bg-white hover:text-primary">Support Us</a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Stats Section -->
-    <section id="stats" class="stats">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-users"></i>
+    <section id="stats" class="relative z-10 -mt-24">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="bg-white/90 backdrop-blur-sm p-8 rounded-lg shadow-xl text-center transform transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:bg-white">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-primary text-2xl"></i>
                     </div>
-                    <div class="stat-content">
-                        <h3><span class="number" data-target="1000">0</span>+</h3>
-                        <p>People Impacted</p>
-                    </div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-project-diagram"></i>
-                    </div>
-                    <div class="stat-content">
-                        <h3><span class="number" data-target="50">0</span>+</h3>
-                        <p>Projects Completed</p>
+                    <div>
+                        <h3 class="text-3xl font-bold mb-2 text-accent"><span class="number" data-target="1000">0</span>+</h3>
+                        <p class="text-gray">People Impacted</p>
                     </div>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-home"></i>
+                
+                <div class="bg-white/90 backdrop-blur-sm p-8 rounded-lg shadow-xl text-center transform transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:bg-white">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-project-diagram text-primary text-2xl"></i>
                     </div>
-                    <div class="stat-content">
-                        <h3><span class="number" data-target="20">0</span>+</h3>
-                        <p>Communities Served</p>
+                    <div>
+                        <h3 class="text-3xl font-bold mb-2 text-accent"><span class="number" data-target="50">0</span>+</h3>
+                        <p class="text-gray">Projects Completed</p>
                     </div>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-hands-helping"></i>
+                
+                <div class="bg-white/90 backdrop-blur-sm p-8 rounded-lg shadow-xl text-center transform transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:bg-white">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-home text-primary text-2xl"></i>
                     </div>
-                    <div class="stat-content">
-                        <h3><span class="number" data-target="100">0</span>+</h3>
-                        <p>Volunteers</p>
+                    <div>
+                        <h3 class="text-3xl font-bold mb-2 text-accent"><span class="number" data-target="20">0</span>+</h3>
+                        <p class="text-gray">Communities Served</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white/90 backdrop-blur-sm p-8 rounded-lg shadow-xl text-center transform transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:bg-white">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-hands-helping text-primary text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-bold mb-2 text-accent"><span class="number" data-target="100">0</span>+</h3>
+                        <p class="text-gray">Volunteers</p>
                     </div>
                 </div>
             </div>
@@ -88,127 +112,159 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2>Who We Are</h2>
-                <p>Empowering communities through sustainable WASH solutions</p>
+    <section id="about" class="py-24 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-accent mb-4">About Us</h2>
+                <p class="text-gray text-lg max-w-3xl mx-auto">Learn about our mission and how we're making a difference in Kisumu's water and sanitation landscape.</p>
             </div>
-            <div class="about-grid">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div class="about-image">
-                    <img src="https://placehold.co/600x400" alt="Our Mission">
+                    <img src="https://placehold.co/600x400" alt="About KYWP" class="w-full rounded-lg shadow-lg">
                 </div>
-                <div class="about-content">
-                    <h3>Our Mission</h3>
-                    <p>We are dedicated to improving lives through access to clean water, proper sanitation facilities, and hygiene education in Kisumu communities.</p>
-                    <div class="mission-points">
-                        <div class="point">
-                            <i class="fas fa-check"></i>
-                            <p>Providing clean water access</p>
+                <div class="space-y-6">
+                    <h3 class="text-3xl font-bold text-accent">Our Mission</h3>
+                    <p class="text-gray-600">The Kisumu Youth WASH Parliament is dedicated to empowering young people to take leadership roles in addressing water, sanitation, and hygiene challenges in their communities.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <i class="fas fa-check-circle text-primary text-xl"></i>
+                            <p>Advocating for clean water access in underserved areas</p>
                         </div>
-                        <div class="point">
-                            <i class="fas fa-check"></i>
-                            <p>Building sanitation facilities</p>
+                        <div class="flex items-center gap-4">
+                            <i class="fas fa-check-circle text-primary text-xl"></i>
+                            <p>Promoting sustainable sanitation practices</p>
                         </div>
-                        <div class="point">
-                            <i class="fas fa-check"></i>
-                            <p>Promoting hygiene education</p>
+                        <div class="flex items-center gap-4">
+                            <i class="fas fa-check-circle text-primary text-xl"></i>
+                            <p>Training youth in WASH leadership</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fas fa-check-circle text-primary text-xl"></i>
+                            <p>Building partnerships for community development</p>
                         </div>
                     </div>
+                    <a href="#contact" class="inline-block px-8 py-4 bg-primary text-white rounded-md font-medium transition-all duration-300 hover:bg-secondary hover:-translate-y-0.5 mt-6">Join Our Mission</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Programs Section -->
-    <section id="programs" class="programs">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Programs</h2>
-                <p>Comprehensive solutions for water and sanitation challenges</p>
+    <section id="programs" class="py-24">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-accent mb-4">Our Programs</h2>
+                <p class="text-gray text-lg max-w-3xl mx-auto">Discover how we're making a difference through our various initiatives and programs.</p>
             </div>
-            <div class="programs-grid">
-                <div class="program-card">
-                    <div class="program-icon">
-                        <i class="fas fa-water"></i>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Water Access Program -->
+                <div class="bg-white p-8 rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-tint text-primary text-2xl"></i>
                     </div>
-                    <h3>Water Access</h3>
-                    <p>Installing clean water systems and improving access to safe drinking water in communities.</p>
-                    <a href="#contact" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <h3 class="text-xl font-bold text-accent mb-4 text-center">Clean Water Access</h3>
+                    <p class="text-gray-600 text-center">Installing water points and ensuring sustainable access to clean water in communities.</p>
                 </div>
-                <div class="program-card">
-                    <div class="program-icon">
-                        <i class="fas fa-toilet"></i>
+
+                <!-- Sanitation Program -->
+                <div class="bg-white p-8 rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-toilet text-primary text-2xl"></i>
                     </div>
-                    <h3>Sanitation</h3>
-                    <p>Building and maintaining proper sanitation facilities for improved community health.</p>
-                    <a href="#contact" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <h3 class="text-xl font-bold text-accent mb-4 text-center">Sanitation Solutions</h3>
+                    <p class="text-gray-600 text-center">Building and maintaining proper sanitation facilities in schools and communities.</p>
                 </div>
-                <div class="program-card">
-                    <div class="program-icon">
-                        <i class="fas fa-hands-wash"></i>
+
+                <!-- Education Program -->
+                <div class="bg-white p-8 rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-graduation-cap text-primary text-2xl"></i>
                     </div>
-                    <h3>Hygiene Education</h3>
-                    <p>Providing education and resources for better hygiene practices and awareness.</p>
-                    <a href="#contact" class="learn-more">Learn More <i class="fas fa-arrow-right"></i></a>
+                    <h3 class="text-xl font-bold text-accent mb-4 text-center">WASH Education</h3>
+                    <p class="text-gray-600 text-center">Providing comprehensive education on water, sanitation, and hygiene practices.</p>
+                </div>
+
+                <!-- Youth Leadership -->
+                <div class="bg-white p-8 rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-users text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-accent mb-4 text-center">Youth Leadership</h3>
+                    <p class="text-gray-600 text-center">Training young people to become WASH leaders in their communities.</p>
+                </div>
+
+                <!-- Community Outreach -->
+                <div class="bg-white p-8 rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-hands-helping text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-accent mb-4 text-center">Community Outreach</h3>
+                    <p class="text-gray-600 text-center">Engaging with communities to understand and address their WASH needs.</p>
+                </div>
+
+                <!-- Advocacy -->
+                <div class="bg-white p-8 rounded-lg shadow-lg transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-bullhorn text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-accent mb-4 text-center">WASH Advocacy</h3>
+                    <p class="text-gray-600 text-center">Advocating for better WASH policies and infrastructure at local and national levels.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Impact Section -->
-    <section id="impact" class="impact">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Impact</h2>
-                <p>Real stories of transformation in our communities</p>
+    <section id="impact" class="py-24 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-accent mb-4">Our Impact</h2>
+                <p class="text-gray text-lg max-w-3xl mx-auto">See how our initiatives are transforming communities and improving lives across Kisumu.</p>
             </div>
-            <div class="swiper impact-slider">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="impact-story">
-                            <img src="https://placehold.co/400x300" alt="Community Impact">
-                            <div class="story-content">
-                                <h3>Clean Water Access</h3>
-                                <p>Provided clean water access to over 500 households in rural Kisumu.</p>
-                                <a href="#" class="read-more">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="impact-story">
-                            <img src="https://placehold.co/400x300" alt="School Program">
-                            <div class="story-content">
-                                <h3>School Sanitation</h3>
-                                <p>Improved sanitation facilities in 10 local schools, benefiting 2000+ students.</p>
-                                <a href="#" class="read-more">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="impact-story">
-                            <img src="https://placehold.co/400x300" alt="Community Education">
-                            <div class="story-content">
-                                <h3>Hygiene Education</h3>
-                                <p>Conducted hygiene awareness programs reaching 15 communities.</p>
-                                <a href="#" class="read-more">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="impact-story">
-                            <img src="https://placehold.co/400x300" alt="Infrastructure">
-                            <div class="story-content">
-                                <h3>Infrastructure Development</h3>
-                                <p>Built 5 community water points serving 1000+ residents daily.</p>
-                                <a href="#" class="read-more">Read More</a>
-                            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Impact Story 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/400x300" alt="Community Impact" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-accent mb-3">Clean Water for Schools</h3>
+                        <p class="text-gray-600 mb-4">Provided clean water access to 10 schools, benefiting over 5,000 students.</p>
+                        <div class="flex items-center text-primary">
+                            <span class="text-sm font-medium">Read More</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+
+                <!-- Impact Story 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/400x300" alt="Sanitation Project" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-accent mb-3">Community Sanitation</h3>
+                        <p class="text-gray-600 mb-4">Built 50 sanitation facilities serving over 2,000 community members.</p>
+                        <div class="flex items-center text-primary">
+                            <span class="text-sm font-medium">Read More</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Impact Story 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://placehold.co/400x300" alt="Youth Training" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-accent mb-3">Youth Leadership</h3>
+                        <p class="text-gray-600 mb-4">Trained 100 youth leaders who are now driving change in their communities.</p>
+                        <div class="flex items-center text-primary">
+                            <span class="text-sm font-medium">Read More</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-block px-8 py-4 bg-primary text-white rounded-md font-medium transition-all duration-300 hover:bg-secondary hover:-translate-y-0.5">View All Stories</a>
             </div>
         </div>
     </section>
