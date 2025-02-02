@@ -26,6 +26,18 @@
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .logo img {
+            filter: brightness(0) invert(1);
+            mix-blend-mode: screen;
+        }
+        
+        @media (min-width: 768px) {
+            .logo img {
+                filter: brightness(0) saturate(100%) invert(31%) sepia(93%) saturate(1352%) hue-rotate(188deg) brightness(91%) contrast(101%);
+            }
+        }
+    </style>
 </head>
 <body class="font-poppins text-text">
     <!-- Header/Navigation -->
@@ -515,7 +527,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-accent text-white pt-16 pb-8">
+    <footer class="bg-[#00264d] text-white pt-16 pb-8">
         <div class="container mx-auto px-6 md:px-12 lg:px-24">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                 <!-- About -->
