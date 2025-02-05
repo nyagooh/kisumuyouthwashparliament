@@ -27,6 +27,27 @@
             }
         }
     </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const upcomingButton = document.querySelector('button:contains("Upcoming Events")');
+        const pastButton = document.querySelector('button:contains("Past Events")');
+        const upcomingEvents = document.querySelectorAll('.upcoming-event');
+        const pastEvents = document.querySelectorAll('.past-event');
+
+        upcomingButton.addEventListener('click', function() {
+            upcomingEvents.forEach(event => event.style.display = 'block');
+            pastEvents.forEach(event => event.style.display = 'none');
+        });
+
+        pastButton.addEventListener('click', function() {
+            upcomingEvents.forEach(event => event.style.display = 'none');
+            pastEvents.forEach(event => event.style.display = 'block');
+        });
+
+        // Initialize with upcoming events visible
+        upcomingButton.click();
+    });
+</script>
 </head>
 <body class="font-poppins text-text">
     <!-- Header -->
