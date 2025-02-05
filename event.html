@@ -29,8 +29,17 @@
     </script>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        const upcomingButton = document.querySelector('button:contains("Upcoming Events")');
-        const pastButton = document.querySelector('button:contains("Past Events")');
+        const buttons = document.querySelectorAll('button');
+        let upcomingButton, pastButton;
+
+        buttons.forEach(button => {
+            if (button.textContent.includes('Upcoming Events')) {
+                upcomingButton = button;
+            } else if (button.textContent.includes('Past Events')) {
+                pastButton = button;
+            }
+        });
+
         const upcomingEvents = document.querySelectorAll('.upcoming-event');
         const pastEvents = document.querySelectorAll('.past-event');
 
