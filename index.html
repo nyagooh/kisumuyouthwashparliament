@@ -26,18 +26,7 @@
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        .logo img {
-            filter: brightness(0) invert(1);
-            mix-blend-mode: screen;
-        }
-        
-        @media (min-width: 768px) {
-            .logo img {
-                filter: brightness(0) saturate(100%) invert(31%) sepia(93%) saturate(1352%) hue-rotate(188deg) brightness(91%) contrast(101%);
-            }
-        }
-    </style>
+    
 </head>
 <body class="font-poppins text-text">
     <!-- Header/Navigation -->
@@ -589,10 +578,27 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Change image every 5 seconds
+            const images = [
+                '/images/wash25.jpg',
+                '/images/wash23.jpg',
+                '/images/wash19.jpg'
+            ];
+            let currentImageIndex = 0;
+            const heroSection = document.querySelector('#home');
+
+            function changeImage() {
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                heroSection.style.backgroundImage = `url(${images[currentImageIndex]})`;
+            }
+
             setInterval(changeImage, 5000);
 
             // Initialize stats animation
-            animateStats();
+            if (typeof animateStats === 'function') {
+                animateStats();
+            } else {
+                console.error('animateStats function is not defined');
+            }
 
             // Filter Buttons
             const filterButtons = document.querySelectorAll('[data-filter]');
@@ -614,11 +620,15 @@
 
             // Mobile menu toggle
             const mobileMenuButton = document.querySelector('button.md\:hidden');
-            const mobileMenu = document.querySelector('div.hidden.md\:flex');
+            const navLinks = document.querySelector('.nav-links');
 
-            mobileMenuButton.addEventListener('click', function() {
-                mobileMenu.classList.toggle('hidden');
-            });
+            if (mobileMenuButton && navLinks) {
+                mobileMenuButton.addEventListener('click', function() {
+                    navLinks.classList.toggle('hidden');
+                });
+            } else {
+                console.error('Mobile menu elements not found');
+            }
         });
     </script>
 </body>
