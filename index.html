@@ -600,11 +600,28 @@
             setInterval(changeImage, 5000);
 
             // Initialize stats animation
-            if (typeof animateStats === 'function') {
-                animateStats();
-            } else {
-                console.error('animateStats function is not defined');
+            function animateStats() {
+                const stats = document.querySelectorAll('.number');
+                stats.forEach(stat => {
+                    const target = +stat.getAttribute('data-target');
+                    const increment = target / 200;
+                    let current = 0;
+
+                    function updateStat() {
+                        current += increment;
+                        if (current < target) {
+                            stat.textContent = Math.floor(current);
+                            requestAnimationFrame(updateStat);
+                        } else {
+                            stat.textContent = target;
+                        }
+                    }
+
+                    updateStat();
+                });
             }
+
+            animateStats();
 
             // Filter Buttons
             const filterButtons = document.querySelectorAll('[data-filter]');
