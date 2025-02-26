@@ -170,14 +170,15 @@
         </div>
     </footer>
     <script>
-        const navLinks = document.querySelector('.nav-links');
-                    if (mobileMenuButton && navLinks) {
-                        mobileMenuButton.addEventListener('click', function() {
-                            navLinks.classList.toggle('hidden');
-                        });
-                    } else {
-                        console.error('Mobile menu elements not found');
-                    }
+     const mobileMenuButton = document.querySelector('button.md\\:hidden'); // Use double backslash for escaping
+            const navLinks = document.querySelector('.nav-links');
+            if (mobileMenuButton && navLinks) {
+                mobileMenuButton.addEventListener('click', function() {
+                    navLinks.classList.toggle('hidden');
+                });
+            } else {
+                console.error('Mobile menu elements not found');
+            }
         </script>
 </body>
 </html>
