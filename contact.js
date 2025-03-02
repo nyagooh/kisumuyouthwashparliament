@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var map = L.map('leaflet-map').setView([-0.1022, 34.7617], 13); // Kisumu coordinates
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap contributors'
     }).addTo(map);
 
     L.marker([-0.1022, 34.7617]).addTo(map)
