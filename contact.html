@@ -7,7 +7,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="contact.js" defer ></script>
     <script>
         tailwind.config = {
             theme: {
@@ -114,15 +117,10 @@
                 <h2 class="text-5xl font-bold text-accent mb-6">Our Location</h2>
                 <p class="text-xl text-gray max-w-3xl mx-auto">Find us at our office location below.</p>
             </div>
-            <div class="w-full h-96">
-                <iframe 
-                    width="100%" 
-                    height="100%" 
-                    frameborder="0" 
-                    style="border:0" 
-                    src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=Kisumu,Kenya" 
-                    allowfullscreen>
-                </iframe>
+            <div id = "map" class="w-full h-96 width=100%
+            height=100%
+        ">
+                
             </div>
         </div>
     </section>
