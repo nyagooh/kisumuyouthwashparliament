@@ -284,116 +284,26 @@
                 <h2 class="text-4xl font-bold text-accent mb-4">Event Gallery</h2>
                 <p class="text-gray text-lg max-w-3xl mx-auto">Highlights from our community initiatives and events</p>
             </div>
-
-            <!-- Filter Buttons -->
-            <div class="flex flex-wrap justify-center gap-4 mb-12">
-                <button class="filter-btn bg-primary text-white px-6 py-2 rounded-full hover:bg-primary/80 transition-all duration-300" data-filter="all">All</button>
-                <button class="filter-btn bg-primary/10 text-primary px-6 py-2 rounded-full hover:bg-primary hover:text-white transition-all duration-300" data-filter="workshop">Workshops</button>
-                <button class="filter-btn bg-primary/10 text-primary px-6 py-2 rounded-full hover:bg-primary hover:text-white transition-all duration-300" data-filter="training">Training</button>
-                <button class="filter-btn bg-primary/10 text-primary px-6 py-2 rounded-full hover:bg-primary hover:text-white transition-all duration-300" data-filter="community">Community</button>
+    
+            <!-- Upcoming Events -->
+            <div class="mb-12">
+                <h3 class="text-3xl font-bold text-primary mb-6">Upcoming Events</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="upcoming-events">
+                    <!-- Events will be inserted here -->
+                </div>
             </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="events-grid">
-                <!-- Workshop Event 1 -->
-                <div class="event-item bg-white rounded-lg overflow-hidden shadow-lg group hover:-translate-y-1 transition-all duration-300" data-category="workshop">
-                    <div class="relative h-48 overflow-hidden">
-                        <span class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm">Workshop</span>
-                        <img src="https://source.unsplash.com/800x600/?water-workshop" alt="Workshop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">WASH Education Workshop</h3>
-                        <p class="text-gray mb-4">Interactive session on water sanitation and hygiene practices for local schools.</p>
-                        <div class="flex items-center text-sm text-gray">
-                            <i class="fas fa-calendar-alt mr-2"></i>
-                            <span>March 15, 2025</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Workshop Event 2 -->
-                <div class="event-item bg-white rounded-lg overflow-hidden shadow-lg group hover:-translate-y-1 transition-all duration-300" data-category="workshop">
-                    <div class="relative h-48 overflow-hidden">
-                        <span class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm">Workshop</span>
-                        <img src="https://source.unsplash.com/800x600/?sanitation-workshop" alt="Workshop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Community Sanitation Workshop</h3>
-                        <p class="text-gray mb-4">Hands-on workshop focusing on sustainable sanitation practices.</p>
-                        <div class="flex items-center text-sm text-gray">
-                            <i class="fas fa-calendar-alt mr-2"></i>
-                            <span>April 5, 2025</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Training Event 1 -->
-                <div class="event-item bg-white rounded-lg overflow-hidden shadow-lg group hover:-translate-y-1 transition-all duration-300" data-category="training">
-                    <div class="relative h-48 overflow-hidden">
-                        <span class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm">Training</span>
-                        <img src="https://source.unsplash.com/800x600/?water-training" alt="Training" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Water Quality Testing Training</h3>
-                        <p class="text-gray mb-4">Professional training on water quality assessment and monitoring.</p>
-                        <div class="flex items-center text-sm text-gray">
-                            <i class="fas fa-calendar-alt mr-2"></i>
-                            <span>May 20, 2025</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Training Event 2 -->
-                <div class="event-item bg-white rounded-lg overflow-hidden shadow-lg group hover:-translate-y-1 transition-all duration-300" data-category="training">
-                    <div class="relative h-48 overflow-hidden">
-                        <span class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm">Training</span>
-                        <img src="https://source.unsplash.com/800x600/?hygiene-training" alt="Training" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Hygiene Ambassador Training</h3>
-                        <p class="text-gray mb-4">Training program for community hygiene ambassadors and advocates.</p>
-                        <div class="flex items-center text-sm text-gray">
-                            <i class="fas fa-calendar-alt mr-2"></i>
-                            <span>June 10, 2025</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Community Event 1 -->
-                <div class="event-item bg-white rounded-lg overflow-hidden shadow-lg group hover:-translate-y-1 transition-all duration-300" data-category="community">
-                    <div class="relative h-48 overflow-hidden">
-                        <span class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm">Community</span>
-                        <img src="https://source.unsplash.com/800x600/?community-water" alt="Community Event" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Clean Water Initiative Launch</h3>
-                        <p class="text-gray mb-4">Community gathering to launch new clean water access points.</p>
-                        <div class="flex items-center text-sm text-gray">
-                            <i class="fas fa-calendar-alt mr-2"></i>
-                            <span>July 1, 2025</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Community Event 2 -->
-                <div class="event-item bg-white rounded-lg overflow-hidden shadow-lg group hover:-translate-y-1 transition-all duration-300" data-category="community">
-                    <div class="relative h-48 overflow-hidden">
-                        <span class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm">Community</span>
-                        <img src="https://source.unsplash.com/800x600/?community-sanitation" alt="Community Event" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Community Cleanup Day</h3>
-                        <p class="text-gray mb-4">Joint community effort to clean and maintain water sources.</p>
-                        <div class="flex items-center text-sm text-gray">
-                            <i class="fas fa-calendar-alt mr-2"></i>
-                            <span>July 15, 2025</span>
-                        </div>
-                    </div>
+    
+            <!-- Past Events -->
+            <div>
+                <h3 class="text-3xl font-bold text-primary mb-6">Past Events</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="past-events">
+                    <!-- Events will be inserted here -->
                 </div>
             </div>
         </div>
     </section>
-
-<!-- Call to Action Section -->
+    
+   <!-- Call to Action Section -->
 <section class="py-12 bg-gradient-to-r from-primary to-secondary text-white relative overflow-hidden">
     <!-- Background Pattern -->
     <div class="absolute inset-0 opacity-10">
