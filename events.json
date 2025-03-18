@@ -1,0 +1,72 @@
+{
+  "gallery": [
+    {
+      "id": 1,
+      "title": "Community Clean-up",
+      "image_url": "images/cleanup.jpg",
+      "description": "A successful community clean-up event held in Kisumu."
+    },
+    {
+      "id": 2,
+      "title": "Water Conservation Workshop",
+      "image_url": "images/workshop.jpg",
+      "description": "An informative workshop on water conservation techniques."
+    }
+  ],
+  "upcoming_events": [
+    {
+      "id": 1,
+      "title": "Event Title 1",
+      "date": "2025-03-15",
+      "location": "Kisumu",
+      "description": "Brief description of the event.",
+      "images": [
+        "https://placehold.co/600x400",
+        "https://placehold.co/600x400",
+        "https://placehold.co/600x400",
+        "https://placehold.co/600x400"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Event Title 3",
+      "date": "2025-05-20",
+      "location": "Mombasa",
+      "description": "Brief description of the event.",
+      "images": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  ],
+  "past_events": [
+    {
+      "id": 1,
+      "title": "Kick4Water Football Tournament",
+      "date": "2024-12-13 to 2024-12-14",
+      "location": "Kassagam Secondary School",
+      "description": "Combining the power of sports and advocacy to champion access to clean water and better sanitation! The Kick for Water Campaign unites communities through football, raising awareness on the critical role of water, sanitation, and hygiene (WASH) in building resilient societies.",
+      "images": [
+        "kiwasko/camp1.jpg",
+        "kiwasko/camp2.jpg",
+        "kiwasko/camp3.jpg",
+        "kiwasko/camp4.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "WorldWetlands Day",
+      "date": "2025-02-02",
+      "location": "Dunga beach",
+      "description": "We joined the Kisumu community in marking World Wetlands Day under the theme 'Protecting Wetlands for Our Common Future.' This year’s focus emphasized the role of Nature-Based Solutions in climate action and conservation. Wetlands are key to biodiversity, water purification, and climate resilience. Let’s work together—CSOs, communities, and stakeholders—to protect these vital ecosystems for a sustainable future!",
+      "images": [
+        "kiwasko/wet1.jpg",
+        "kiwasko/wet2.jpg",
+        "kiwasko/wet3.jpg",
+        "kiwasko/wet4.jpg"
+      ]
+    }
+  ]
+}
