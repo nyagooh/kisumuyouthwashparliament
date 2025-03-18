@@ -1,0 +1,48 @@
+{
+  "gallery": [
+    {
+      "id": 1,
+      "title": "Community Clean-up",
+      "image_url": "images/cleanup.jpg",
+      "description": "A successful community clean-up event held in Kisumu."
+    },
+    {
+      "id": 2,
+      "title": "Water Conservation Workshop",
+      "image_url": "images/workshop.jpg",
+      "description": "An informative workshop on water conservation techniques."
+    }
+  ],
+  "upcoming_events": [
+    {
+      "id": 1,
+      "title": "River Restoration Project",
+      "date": "2025-04-15",
+      "location": "Kisumu River Park",
+      "description": "Join us in restoring the natural habitat of Kisumu River."
+    },
+    {
+      "id": 2,
+      "title": "Youth Leadership Summit",
+      "date": "2025-05-20",
+      "location": "Kisumu City Hall",
+      "description": "Empowering youth to lead the change in water conservation."
+    }
+  ],
+  "past_events": [
+    {
+      "id": 1,
+      "title": "Lake Victoria Cleanup",
+      "date": "2025-03-01",
+      "location": "Lake Victoria Shores",
+      "description": "A collaborative effort to clean the shores of Lake Victoria."
+    },
+    {
+      "id": 2,
+      "title": "Water Awareness Campaign",
+      "date": "2025-02-15",
+      "location": "Kisumu Central Park",
+      "description": "Raising awareness about water scarcity and conservation."
+    }
+  ]
+}
