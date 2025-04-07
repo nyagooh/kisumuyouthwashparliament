@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Kisumu Youth WASH Parliament</title>
+    <title>Events - Kisumu Youth WASH Parliament</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="../css/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="contact.js" defer ></script>
+    <script src="event.js" defer></script>
     <script>
         tailwind.config = {
             theme: {
@@ -38,37 +36,96 @@
             <div class="logo">
                 <img src="images/youthwashlogo.jpg" alt="KYWP Logo" class="h-16 md:h-20">
             </div>
-         <div class="hidden md:flex space-x-8">
-                <a href="index.html" class="text-text hover:text-secondary transition-colors duration-300">Home</a>
-                <a href="about.html" class="text-text hover:text-secondary transition-colors duration-300">About</a>
-                <a href="impact.html" class="text-text hover:text-secondary transition-colors duration-300">Impact</a>
-                <a href="event.html" class="text-text hover:text-secondary transition-colors duration-300">Events</a>
-                <a href="contact.html" class="text-text hover:text-secondary transition-colors duration-300">Contact</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="/" class="text-text hover:text-secondary transition-colors duration-300">Home</a>
+                <a href="about" class="text-text hover:text-secondary transition-colors duration-300">About</a>
+                <a href="impact" class="text-text hover:text-secondary transition-colors duration-300">Impact</a>
+                <a href="event" class="text-text hover:text-secondary transition-colors duration-300">Events</a>
+                <a href="contact" class="text-text hover:text-secondary transition-colors duration-300">Contact</a>
             </div>
             <a href="#donate" class="hidden md:inline-block px-6 py-2 bg-secondary text-white rounded-md hover:bg-secondary/80 transition-all duration-300 hover:-translate-y-0.5">Donate</a>
             <button class="md:hidden text-text hover:text-primary">
-                <i class="fas fa-bars"></i>
+                <i class="fas fa-bars text-2xl"></i>
             </button>
             <div class="absolute top-full left-0 right-0 bg-white shadow-lg hidden flex-col nav-links">
-                <a href="index.html" class="block text-text hover:text-secondary transition-colors duration-300 p-4">Home</a>
-                <a href="about.html" class="block text-text hover:text-secondary transition-colors duration-300 p-4">About</a>
-                <a href="impact.html" class="block text-text hover:text-secondary transition-colors duration-300 p-4">Impact</a>
-                <a href="event.html" class="block text-text hover:text-secondary transition-colors duration-300 p-4">Events</a>
-                <a href="contact.html" class="block text-text hover:text-secondary transition-colors duration-300 p-4">Contact</a>
+                <a href="/" class="block text-text hover:text-secondary transition-colors duration-300 p-4">Home</a>
+                <a href="about" class="block text-text hover:text-secondary transition-colors duration-300 p-4">About</a>
+                <a href="impact" class="block text-text hover:text-secondary transition-colors duration-300 p-4">Impact</a>
+                <a href="event" class="block text-text hover:text-secondary transition-colors duration-300 p-4">Events</a>
+                <a href="contact" class="block text-text hover:text-secondary transition-colors duration-300 p-4">Contact</a>
             </div>
         </nav>
     </header>
     <section class="relative bg-cover bg-center text-white py-48 pt-32" style="background-image: url('images/wash17.jpg');">
-        <div class="absolute inset-0 bg-blue opacity-50  "></div>
+        <div class="absolute inset-0 bg-blue  "></div>
         <div class="container mx-auto px-6 md:px-12 lg:px-24">
-            <div class="text-center mt-24">
-                <h1 class="text-5xl font-bold mb-4">Contact Us</h1>
+            <div class="text-center pt-28">
+                <h1 class="text-5xl font-bold mb-4">Events</h1>
                 <p class="text-lg max-w-2xl mx-auto">Get in touch with us to learn more about our mission and how we can help you.</p>
             </div>
         </div>
         <div class="absolute inset-0 bg-gradient-to-b from-primary to-transparent opacity-50"></div>
     </section>
-    <!-- Contact Section -->
+    <!-- Impact 
+
+   <!- Events Section -->
+   <section id="events" class="py-24 bg-light">
+    <div class="container mx-auto px-6 md:px-12 lg:px-24">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-accent mb-4">Events</h2>
+            <p class="text-gray text-lg max-w-3xl mx-auto">Join us in our events and be part of the change.</p>
+        </div>
+    </div>
+</section>
+<section class="py-12 bg-gradient-to-r from-primary to-secondary text-white relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"></div>
+    </div>
+    
+    <div class="container mx-auto px-6 md:px-12 lg:px-24 relative z-10">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Join Us in Making Clean Water Accessible</h2>
+            <p class="text-lg mb-6 opacity-90">Together, we can ensure everyone has access to clean water and proper sanitation.</p>
+            
+            <div class="grid md:grid-cols-3 gap-4 mb-8">
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 transform hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-hands-helping text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-1">Volunteer</h3>
+                    <p class="opacity-90 text-sm">Join our team of dedicated volunteers.</p>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 transform hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-hand-holding-water text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-1">Donate</h3>
+                    <p class="opacity-90 text-sm">Support our projects and create impact.</p>
+                </div>
+                
+                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 transform hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <i class="fas fa-users text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-1">Partner</h3>
+                    <p class="opacity-90 text-sm">Help us expand our reach and impact.</p>
+                </div>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                <a href="#contact" class="px-6 py-2 bg-primary text-white rounded-lg font-bold text-sm hover:bg-primary/80 transition-all duration-300 hover:-translate-y-0.5">
+                    Get Involved Today
+                </a>
+                <a href="#donate" class="px-6 py-2 bg-secondary text-white rounded-lg font-bold text-sm hover:bg-secondary/80 transition-all duration-300 hover:-translate-y-0.5">
+                    Make a Donation
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
      <!-- Contact Section -->
      <section id="contact" class="py-24 bg-white">
         <div class="container mx-auto px-6 md:px-12 lg:px-24">
@@ -147,7 +204,6 @@
             </div>
         </div>
     </section>
-    <!-- Footer -->
     <footer class="bg-[#00264d] text-white pt-16 pb-8">
         <div class="container mx-auto px-6 md:px-12 lg:px-24">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
@@ -159,18 +215,19 @@
                     <h3 class="text-xl font-bold mb-4">About KYWP</h3>
                     <p class="text-gray-300 leading-relaxed">Empowering youth to take action on water, sanitation, and hygiene issues in their communities.</p>
                 </div>
+    
                 <!-- Quick Links -->
                 <div class="space-y-4">
                     <h3 class="text-xl font-bold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors duration-300">Home</a></li>
-                        <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors duration-300">About Us</a></li>
-                        <li><a href="programs.html" class="text-gray-300 hover:text-white transition-colors duration-300">Programs</a></li>
-                        <li><a href="impact.html" class="text-gray-300 hover:text-white transition-colors duration-300">Impact</a></li>
-                        <li><a href="event.html" class="text-gray-300 hover:text-white transition-colors duration-300">Events</a></li>
-                        <li><a href="contact.html" class="text-gray-300 hover:text-white transition-colors duration-300">Contact</a></li>
+                        <li><a href="#home" class="text-gray-300 hover:text-white transition-colors duration-300">Home</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-white transition-colors duration-300">About Us</a></li>
+                        <li><a href="#programs" class="text-gray-300 hover:text-white transition-colors duration-300">Programs</a></li>
+                        <li><a href="#events" class="text-gray-300 hover:text-white transition-colors duration-300">Events</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors duration-300">Contact</a></li>
                     </ul>
                 </div>
+    
                 <!-- Programs -->
                 <div class="space-y-4">
                     <h3 class="text-xl font-bold mb-4">Our Programs</h3>
@@ -181,20 +238,33 @@
                         <li><a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Community Outreach</a></li>
                     </ul>
                 </div>
+    
                 <!-- Newsletter -->
                 <div class="space-y-4">
                     <h3 class="text-xl font-bold mb-4">Newsletter</h3>
                     <p class="text-gray-300 mb-4">Subscribe to our newsletter for updates and news.</p>
-                    <form class="space-y-2">
-                        <input type="email" placeholder="Enter your email" class="w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary sm:text-sm">
-                        <button type="submit" class="w-full px-6 py-2 bg-secondary text-white rounded-md hover:bg-secondary/80 transition-all duration-300">Subscribe</button>
+                    <form class="space-y-4">
+                        <input type="email" placeholder="Your email address" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:ring-2 focus:ring-white/20 focus:border-white outline-none transition-all duration-300">
+                        <button type="submit" class="w-full bg-primary text-white py-3 rounded-lg font-medium hover:bg-primary/80 transition-colors">
+                            Subscribe
+                        </button>
                     </form>
+                </div>
+            </div>
+    
+            <div class="border-t border-white/10 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <p class="text-gray-300">&copy; 2025 Kisumu Youth WASH Parliament. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Privacy Policy</a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">Terms of Service</a>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
     <script>
-     const mobileMenuButton = document.querySelector('button.md\\:hidden'); // Use double backslash for escaping
+      const mobileMenuButton = document.querySelector('button.md\\:hidden'); // Use double backslash for escaping
             const navLinks = document.querySelector('.nav-links');
             if (mobileMenuButton && navLinks) {
                 mobileMenuButton.addEventListener('click', function() {
@@ -204,5 +274,6 @@
                 console.error('Mobile menu elements not found');
             }
         </script>
+    
 </body>
 </html>
