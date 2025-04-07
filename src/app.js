@@ -59,6 +59,42 @@ app.post('/api/save-data', async (req, res) => {
             await fs.writeFile(filename, JSON.stringify(eventsData, null, 2));
             
             res.json({ success: true });
+        } else if (type === 'impact') {
+            const filename = path.join(__dirname, '../data/impact.json');
+            
+            await fs.mkdir(path.join(__dirname, '../data')).catch(() => {});
+            
+            let impactData = { impact_stories: [] };
+            
+            try {
+                const fileContent = await fs.readFile(filename, 'utf8');
+                const parsedData = JSON.parse(fileContent);
+                
+                if (parsedData && parsedData.impact_stories) {
+                    impactData = parsedData;
+                }
+            } catch (error) {
+                // File doesn't exist or has invalid format, use default empty structure
+            }
+            
+            // Generate a unique ID
+            const maxId = impactData.impact_stories.length > 0 
+                ? Math.max(...impactData.impact_stories.map(story => story.id)) 
+                : 0;
+            
+            // Create the impact story object
+            const impactStory = {
+                id: maxId + 1,
+                title: data.title,
+                description: data.description,
+                images: [data.imageUrl] // Assuming a single image URL is provided
+            };
+            
+            impactData.impact_stories.push(impactStory);
+            
+            await fs.writeFile(filename, JSON.stringify(impactData, null, 2));
+            
+            res.json({ success: true });
         } else {
             const filename = path.join(__dirname, `../data/${type}.json`);
             
@@ -107,6 +143,18 @@ app.get('/event', (req, res) => {
 
 app.get('/impact', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/pages/impact.html'));
+});
+
+// Endpoint to fetch impact stories
+app.get('/api/impact-stories', (req, res) => {
+    try {
+        const impactStoriesPath = path.join(__dirname, '../data/impact.json');
+        const impactStories = JSON.parse(fs.readFileSync(impactStoriesPath, 'utf8'));
+        res.json({ impact_stories: impactStories });
+    } catch (error) {
+        console.error('Error fetching impact stories:', error);
+        res.status(500).json({ error: 'Failed to fetch impact stories' });
+    }
 });
 
 export default app; 
