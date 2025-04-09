@@ -56,28 +56,228 @@
             </div>
         </nav>
     </header>
-    <section class="relative bg-cover bg-center text-white py-48 pt-32" style="background-image: url('images/wash17.jpg');">
-        <div class="absolute inset-0 bg-blue  "></div>
-        <div class="container mx-auto px-6 md:px-12 lg:px-24">
+    <section class="relative bg-cover bg-center text-white py-48 pt-32" style="background-image: url('images/wash19.jpg');">
+        <div class="absolute inset-0 bg-primary/30"></div>
+        <div class="container mx-auto px-6 md:px-12 lg:px-24 relative z-10">
             <div class="text-center pt-28">
-                <h1 class="text-5xl font-bold mb-4">Events</h1>
-                <p class="text-lg max-w-2xl mx-auto">Get in touch with us to learn more about our mission and how we can help you.</p>
+                <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">Event Gallery</h1>
+                <p class="text-xl max-w-2xl mx-auto">Explore our journey through impactful WASH initiatives and community events</p>
+                <div class="mt-8 flex flex-wrap justify-center gap-4">
+                    <a href="#gallery" class="px-6 py-3 bg-white text-primary rounded-lg font-bold text-sm hover:bg-opacity-90 transition-all duration-300 hover:-translate-y-1 flex items-center">
+                        <i class="fas fa-images mr-2"></i> Browse Gallery
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="absolute inset-0 bg-gradient-to-b from-primary to-transparent opacity-50"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-primary/50 to-transparent opacity-70"></div>
     </section>
-    <!-- Impact 
-
-   <!- Events Section -->
-   <section id="events" class="py-24 bg-light">
+    <!-- Events Section -->
+<section id="events" class="py-24 bg-light">
     <div class="container mx-auto px-6 md:px-12 lg:px-24">
         <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold text-accent mb-4">Events</h2>
-            <p class="text-gray text-lg max-w-3xl mx-auto">Join us in our events and be part of the change.</p>
+            <h2 class="text-4xl font-bold text-accent mb-4">Our Events</h2>
+            <p class="text-gray text-lg max-w-3xl mx-auto">Join us in our impactful events and be part of the change in water and sanitation initiatives.</p>
+        </div>
+        
+        <!-- Events Gallery Introduction -->
+        <div class="text-center mb-12" id="gallery">
+            <p class="text-gray-600 max-w-3xl mx-auto">Browse through our collection of memorable moments from past events that showcase our commitment to water and sanitation initiatives.</p>
+        </div>
+        
+        <!-- Events Gallery Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-16">
+            <!-- Gallery Item 1 -->
+            <div class="group relative overflow-hidden rounded-lg shadow-md aspect-square cursor-pointer">
+                <img src="images/wash8.jpg" alt="Community Water Project" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                    <h4 class="text-white text-lg font-bold">Community Water Project</h4>
+                    <p class="text-white/80 text-sm">March 2024</p>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 2 -->
+            <div class="group relative overflow-hidden rounded-lg shadow-md aspect-square cursor-pointer">
+                <img src="images/wash2.jpg" alt="Youth Leadership Workshop" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                    <h4 class="text-white text-lg font-bold">Youth Leadership Workshop</h4>
+                    <p class="text-white/80 text-sm">February 2024</p>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 3 -->
+            <div class="group relative overflow-hidden rounded-lg shadow-md aspect-square cursor-pointer">
+                <img src="images/wash14.jpg" alt="School Sanitation Program" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                    <h4 class="text-white text-lg font-bold">School Sanitation Program</h4>
+                    <p class="text-white/80 text-sm">January 2024</p>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 4 -->
+            <div class="group relative overflow-hidden rounded-lg shadow-md aspect-square cursor-pointer">
+                <img src="images/wash1.jpg" alt="Community Engagement" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                    <h4 class="text-white text-lg font-bold">Community Engagement</h4>
+                    <p class="text-white/80 text-sm">December 2023</p>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 5 -->
+            <div class="group relative overflow-hidden rounded-lg shadow-md aspect-square cursor-pointer">
+                <img src="images/wash19.jpg" alt="Annual WASH Conference" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                    <h4 class="text-white text-lg font-bold">Annual WASH Conference</h4>
+                    <p class="text-white/80 text-sm">November 2023</p>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 6 -->
+            <div class="group relative overflow-hidden rounded-lg shadow-md aspect-square cursor-pointer">
+                <img src="images/wash20.jpg" alt="World Water Day" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                    <h4 class="text-white text-lg font-bold">World Water Day</h4>
+                    <p class="text-white/80 text-sm">March 2023</p>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 7 -->
+            <div class="group relative overflow-hidden rounded-lg shadow-md aspect-square cursor-pointer">
+                <img src="images/wash11.jpg" alt="Clean Water Initiative" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                    <h4 class="text-white text-lg font-bold">Clean Water Initiative</h4>
+                    <p class="text-white/80 text-sm">February 2023</p>
+                </div>
+            </div>
+            
+            <!-- Gallery Item 8 -->
+            <div class="group relative overflow-hidden rounded-lg shadow-md aspect-square cursor-pointer">
+                <img src="images/wash9.jpg" alt="Youth Summit" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                    <h4 class="text-white text-lg font-bold">Youth Summit</h4>
+                    <p class="text-white/80 text-sm">January 2023</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Second Row with Different Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            <!-- Large Gallery Item 1 -->
+            <div class="group relative overflow-hidden rounded-lg shadow-lg h-80 cursor-pointer">
+                <img src="images/wash13.jpg" alt="Water Testing Campaign" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <h4 class="text-white text-xl font-bold">Water Testing Campaign</h4>
+                    <p class="text-white/80">December 2022</p>
+                    <p class="text-white/70 text-sm mt-2">Community-wide water testing initiative to ensure safe drinking water for all residents.</p>
+                </div>
+            </div>
+            
+            <!-- Large Gallery Item 2 -->
+            <div class="group relative overflow-hidden rounded-lg shadow-lg h-80 cursor-pointer">
+                <img src="images/wash6.jpg" alt="Sanitation Workshop" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <h4 class="text-white text-xl font-bold">Sanitation Workshop</h4>
+                    <p class="text-white/80">November 2022</p>
+                    <p class="text-white/70 text-sm mt-2">Educational workshop on proper sanitation practices for community health workers.</p>
+                </div>
+            </div>
+            
+            <!-- Large Gallery Item 3 -->
+            <div class="group relative overflow-hidden rounded-lg shadow-lg h-80 cursor-pointer">
+                <img src="images/wash3.jpg" alt="School Outreach Program" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <h4 class="text-white text-xl font-bold">School Outreach Program</h4>
+                    <p class="text-white/80">October 2022</p>
+                    <p class="text-white/70 text-sm mt-2">Engaging with local schools to promote water conservation and hygiene practices.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Featured Event with Full Width -->
+        <div class="mb-16">
+            <div class="group relative overflow-hidden rounded-lg shadow-xl h-96 cursor-pointer">
+                <img src="images/wash25.jpg" alt="Annual WASH Parliament Assembly" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
+                <div class="absolute inset-0 flex flex-col justify-center items-center text-center p-6 md:p-12">
+                    <h3 class="text-white text-3xl md:text-4xl font-bold mb-4">Annual WASH Parliament Assembly</h3>
+                    <p class="text-white/90 text-lg max-w-3xl">Our flagship event bringing together youth leaders, government officials, and community stakeholders to address water and sanitation challenges in Kisumu County.</p>
+                    <p class="text-white/80 mt-4">September 2022</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
-<section class="py-12 bg-gradient-to-r from-primary to-secondary text-white relative overflow-hidden">
+<!-- More Gallery Items -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6 md:px-12 lg:px-24">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-primary mb-4">Community Impact</h2>
+            <p class="text-gray-600 max-w-3xl mx-auto">Moments that showcase our commitment to improving water access and sanitation in communities</p>
+        </div>
+        
+        <!-- Image Gallery with Varied Layout -->
+        <div class="grid grid-cols-12 gap-4">
+            <!-- Large Gallery Item 1 -->
+            <div class="col-span-12 md:col-span-8 group relative overflow-hidden rounded-xl shadow-lg h-96">
+                <img src="images/wash12.jpg" alt="Community Water Project" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <h4 class="text-white text-2xl font-bold">Community Water Project</h4>
+                    <p class="text-white/90">Providing clean water access to rural communities</p>
+                </div>
+            </div>
+            
+            <!-- Smaller Gallery Items -->
+            <div class="col-span-12 md:col-span-4 group relative overflow-hidden rounded-xl shadow-lg h-96">
+                <img src="images/wash21.jpg" alt="Youth Engagement" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <h4 class="text-white text-xl font-bold">Youth Engagement</h4>
+                    <p class="text-white/90">Empowering the next generation</p>
+                </div>
+            </div>
+            
+            <!-- Medium Gallery Items -->
+            <div class="col-span-12 md:col-span-6 group relative overflow-hidden rounded-xl shadow-lg h-72">
+                <img src="images/wash22.jpg" alt="Sanitation Workshop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <h4 class="text-white text-xl font-bold">Sanitation Workshop</h4>
+                    <p class="text-white/90">Teaching proper hygiene practices</p>
+                </div>
+            </div>
+            
+            <div class="col-span-12 md:col-span-6 group relative overflow-hidden rounded-xl shadow-lg h-72">
+                <img src="images/wash24.jpg" alt="School Program" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <h4 class="text-white text-xl font-bold">School Program</h4>
+                    <p class="text-white/90">Educating children on water conservation</p>
+                </div>
+            </div>
+            
+            <!-- Small Gallery Items in a Row -->
+            <div class="col-span-4 group relative overflow-hidden rounded-xl shadow-lg h-48">
+                <img src="images/wash27.jpg" alt="Team Meeting" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                    <h4 class="text-white text-sm font-bold">Team Meeting</h4>
+                </div>
+            </div>
+            
+            <div class="col-span-4 group relative overflow-hidden rounded-xl shadow-lg h-48">
+                <img src="images/wash10.jpg" alt="Water Testing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                    <h4 class="text-white text-sm font-bold">Water Testing</h4>
+                </div>
+            </div>
+            
+            <div class="col-span-4 group relative overflow-hidden rounded-xl shadow-lg h-48">
+                <img src="images/wash23.jpg" alt="Community Meeting" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                    <h4 class="text-white text-sm font-bold">Community Meeting</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Get Involved Section -->
+<section class="py-16 bg-gradient-to-r from-primary to-secondary text-white relative overflow-hidden">
     <!-- Background Pattern -->
     <div class="absolute inset-0 opacity-10">
         <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"></div>
