@@ -10,7 +10,9 @@
         "kiwasko/wak2.jpg",
         "kiwasko/wak3.jpg",
         "kiwasko/wak4.jpg"
-      ]
+      ],
+      "tag": "POLICY ADVOCACY",
+      "layout": "left"
     },
     {
       "id": 2,
@@ -22,7 +24,9 @@
         "kiwasko/water2.jpg",
         "kiwasko/water3.jpg",
         "kiwasko/water4.jpg"
-      ]
+      ],
+      "tag": "EDUCATION & ADVOCACY",
+      "layout": "right"
     },
     {
       "id": 3,
@@ -34,7 +38,9 @@
         "kiwasko/ev6.jpg",
         "kiwasko/ev2.jpg",
         "kiwasko/ev8.jpg"
-      ]
+      ],
+      "tag": "GLOBAL PARTNERSHIPS",
+      "layout": "left"
     }
   ]
 }

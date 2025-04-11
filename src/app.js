@@ -1,6 +1,6 @@
 import express from 'express';
 import { promises as fs } from 'fs';
-import path from 'path';
+import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -146,14 +146,33 @@ app.get('/impact', (req, res) => {
 });
 
 // Endpoint to fetch impact stories
-app.get('/api/impact-stories', (req, res) => {
+app.get('/api/impact-stories', async (req, res) => {
     try {
         const impactStoriesPath = path.join(__dirname, '../data/impact.json');
-        const impactStories = JSON.parse(fs.readFileSync(impactStoriesPath, 'utf8'));
-        res.json({ impact_stories: impactStories });
+        console.log("dirname: ", __dirname);
+        
+        // Check if file exists
+        try {
+            await fs.access(impactStoriesPath);
+        } catch (error) {
+            console.error('Impact stories file not found');
+            return res.status(404).json({ error: 'Impact stories file not found' });
+        }
+        
+        // Read and parse the file
+        const fileContent = await fs.readFile(impactStoriesPath, 'utf8');
+        const impactStories = JSON.parse(fileContent);
+        
+        // Validate the data structure
+        if (!impactStories || !Array.isArray(impactStories.impact_stories)) {
+            console.error('Invalid impact stories data structure');
+            return res.status(500).json({ error: 'Invalid impact stories data structure' });
+        }
+        
+        res.json(impactStories);
     } catch (error) {
-        console.error('Error fetching impact stories:', error);
-        res.status(500).json({ error: 'Failed to fetch impact stories' });
+        console.error('Error reading impact stories:', error);
+        res.status(500).json({ error: 'Failed to read impact stories' });
     }
 });
 
