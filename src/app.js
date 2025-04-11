@@ -83,9 +83,12 @@ app.post("/api/save-data", async (req, res) => {
       const savedImages = [];
       for (const image of data.images) {
         const imagePath = path.join(imagesFolder, path.basename(image));
-        console.log("imagePath: ", imagePath);
-        
-        await fs.writeFile(imagePath, image, "base64");
+
+        // Decode base64 image data before saving
+        const base64Data = image.replace(/^data:image\/\w+;base64,/, ""); // Remove base64 prefix
+        const buffer = Buffer.from(base64Data, "base64"); // Convert to binary data
+
+        await fs.writeFile(imagePath, buffer); // Save the decoded image
         savedImages.push(`kiwasko/${path.basename(image)}`);
       }
 
