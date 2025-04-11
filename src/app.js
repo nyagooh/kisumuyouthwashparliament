@@ -176,4 +176,34 @@ app.get('/api/impact-stories', async (req, res) => {
     }
 });
 
+// Endpoint to fetch gallery data
+app.get('/api/gallery-data', async (req, res) => {
+    try {
+        const galleryDataPath = path.join(__dirname, '../public/data/gallery-data.json');
+        
+        // Check if file exists
+        try {
+            await fs.access(galleryDataPath);
+        } catch (error) {
+            console.error('Gallery data file not found');
+            return res.status(404).json({ error: 'Gallery data file not found' });
+        }
+        
+        // Read and parse the file
+        const fileContent = await fs.readFile(galleryDataPath, 'utf8');
+        const galleryData = JSON.parse(fileContent);
+        
+        // Validate the data structure
+        if (!galleryData || !Array.isArray(galleryData.galleryItems)) {
+            console.error('Invalid gallery data structure');
+            return res.status(500).json({ error: 'Invalid gallery data structure' });
+        }
+        
+        res.json(galleryData);
+    } catch (error) {
+        console.error('Error reading gallery data:', error);
+        res.status(500).json({ error: 'Failed to read gallery data' });
+    }
+});
+
 export default app; 

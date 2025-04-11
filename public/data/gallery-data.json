@@ -1,0 +1,68 @@
+{
+  "galleryItems": [
+    {
+      "id": 1,
+      "image": "images/wash8.jpg",
+      "alt": "Community Water Project",
+      "category": "community",
+      "title": "Community Water Project",
+      "date": "March 2024"
+    },
+    {
+      "id": 2,
+      "image": "images/wash2.jpg",
+      "alt": "Youth Leadership Workshop",
+      "category": "workshop",
+      "title": "Youth Leadership Workshop",
+      "date": "February 2024"
+    },
+    {
+      "id": 3,
+      "image": "images/wash14.jpg",
+      "alt": "School Sanitation Program",
+      "category": "school",
+      "title": "School Sanitation Program",
+      "date": "January 2024"
+    },
+    {
+      "id": 4,
+      "image": "images/wash1.jpg",
+      "alt": "Community Engagement",
+      "category": "community",
+      "title": "Community Engagement",
+      "date": "December 2023"
+    },
+    {
+      "id": 5,
+      "image": "images/wash19.jpg",
+      "alt": "Annual WASH Conference",
+      "category": "workshop",
+      "title": "Annual WASH Conference",
+      "date": "November 2023"
+    },
+    {
+      "id": 6,
+      "image": "images/wash20.jpg",
+      "alt": "World Water Day",
+      "category": "community",
+      "title": "World Water Day",
+      "date": "March 2023"
+    },
+    {
+      "id": 7,
+      "image": "images/wash11.jpg",
+      "alt": "Clean Water Initiative",
+      "category": "community",
+      "title": "Clean Water Initiative",
+      "date": "February 2023"
+    },
+    {
+      "id": 8,
+      "image": "images/wash9.jpg",
+      "alt": "Youth Summit",
+      "category": "workshop",
+      "title": "Youth Summit",
+      "date": "January 2023"
+    }
+  ]
+} 
