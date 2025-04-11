@@ -33,66 +33,68 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Handle form submission
-    dataForm.addEventListener('submit', async function(e) {
+    dataForm.addEventListener('submit', async function (e) {
         e.preventDefault();
-
+    
         const formData = new FormData(this);
-        console.log("formData: ", formData);
-        
-        // Check if the form is valid
+        const selectedType = formData.get('type');
+    
         if (!this.checkValidity()) {
             alert('Please fill in all required fields.');
             return;
         }
-        // Check if the images are selected
-        if (formData.get('images[]').length === 0) {
-            alert('Please select at least one image.');
-            return;
-        }
-        const images = document.getElementById('images').files;
-
-        const data = {};
-        data.images = []; // Ensure images is initialized as an array
-
-        // Convert FormData to object
-        formData.forEach((value, key) => {
-            if (key === 'images[]') {
-                data.images.push(value.name); // Push image names into the array
-            } else {
-                data[key] = value;
+    
+        // Handle only 'impact' data submission for now
+        if (selectedType === 'impact') {
+            const title = formData.get('title');
+            const subtitle = formData.get('subtitle');
+            const description = formData.get('description');
+            const tag = formData.get('tag');
+            const layout = formData.get('layout');
+            const imagesInput = document.getElementById('images');
+            const images = Array.from(imagesInput.files);
+            const type = selectedType.toLowerCase();
+    
+            if (images.length === 0) {
+                alert('Please select at least one image.');
+                return;
             }
-        });
-        // console.log("images: ", data.images.len());
-
-        // Check if images are selected 
-        if (data.images.length === 0) { // Use .length instead of .len()
-            alert('Please select at least one image.');
-            return;
-        }
-
-        // Prefix image paths with "kiwasko/"
-        data.images = data.images.map(image => `kiwasko/${image}`); // Fix mapping logic
-
-        try {
-            const response = await fetch('/api/save-data', {
-                method: 'POST',
-                body: JSON.stringify(data),
-                headers: {
-                    'Content-Type': 'application/json'
+    
+            const imagePaths = images.map(file => `kiwasko/${file.name}`);
+    
+            const impactData = {
+                title,
+                subtitle,
+                description,
+                tag,
+                layout,
+                images: imagePaths,
+                type
+            };
+    
+            try {
+                const response = await fetch('/api/save-data', {
+                    method: 'POST',
+                    body: JSON.stringify(impactData),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+    
+                const result = await response.json();
+    
+                if (result.success) {
+                    alert('Impact item added successfully!');
+                    dataForm.reset();
+                } else {
+                    alert('Failed to add impact item. Please try again.');
                 }
-            });
-
-            const result = await response.json();
-
-            if (result.success) {
-                alert('Item added successfully!');
-                dataForm.reset();
-            } else {
-                alert('Failed to add item. Please try again.');
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred while submitting impact data.');
             }
-        } catch (error) {
-            console.error('Error:', error);
-            alert('An error occurred. Please try again.');
+        } else {
+            alert('Only "impact" submissions are currently supported.');
         }
-    });
+    });    
 });
