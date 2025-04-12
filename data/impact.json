@@ -1,0 +1,46 @@
+{
+  "impact_stories": [
+    {
+      "id": 1,
+      "title": "Water Policy Advocacy",
+      "subtitle": "Role of Policy and Community Action in Sustainable Water Management",
+      "description": "Reducing Non-Revenue Water (NRW) loss is crucial for ensuring sustainable water management in Kisumu. During our productive discussion with Kisumu Water and Sanitation Company Limited (KIWASCO), we explored how Parliament can play an active role in addressing the 38% NRW loss through legislative frameworks, policy oversight, and budget allocations for infrastructure improvements. Key areas of focus include upgrading aging pipelines, improving metering systems, and leveraging technology such as smart water monitoring to detect and prevent leakages. Collaboration with water service providers is essential in strengthening governance, enhancing service delivery, and promoting accountability in water distribution.",
+      "images": [
+        "kiwasko/kiwak.jpg",
+        "kiwasko/wak2.jpg",
+        "kiwasko/wak3.jpg",
+        "kiwasko/wak4.jpg"
+      ],
+      "tag": "POLICY ADVOCACY",
+      "layout": "left"
+    },
+    {
+      "id": 2,
+      "title": "Sensitization and advocacy",
+      "subtitle": "An inspiring story of transformation and impact",
+      "description": "We conducted an interactive session with students at Mbeme Primary School, Kisumu East, focusing on water, sanitation, and waste management best practices. Teaching these concepts at an early age helps instill lifelong habits that contribute to healthier communities and environmental sustainability. Empowering young minds with knowledge on integrated water resource management, climate action, and responsible waste disposal ensures they become advocates for positive change.",
+      "images": [
+        "kiwasko/water1.jpg",
+        "kiwasko/water2.jpg",
+        "kiwasko/water3.jpg",
+        "kiwasko/water4.jpg"
+      ],
+      "tag": "EDUCATION & ADVOCACY",
+      "layout": "right"
+    },
+    {
+      "id": 3,
+      "title": "Partnerships and collaboration",
+      "subtitle": "Strengthening WASH Collaboration at the Benchmarking Forum in Lusaka",
+      "description": "We were honored to participate in the WASH Benchmarking Forum in Lusaka, Zambia, represented by Adwet Mc'Omondi. This forum provided a platform for sharing expertise, fostering innovation, and building partnerships for sustainable water, sanitation, and hygiene solutions. Collaborations like these drive impactful change in communities, ensuring access to safe water and improved sanitation for all.",
+      "images": [
+        "kiwasko/ev1.jpg",
+        "kiwasko/ev6.jpg",
+        "kiwasko/ev2.jpg",
+        "kiwasko/ev8.jpg"
+      ],
+      "tag": "GLOBAL PARTNERSHIPS",
+      "layout": "left"
+    }
+  ]
+}
