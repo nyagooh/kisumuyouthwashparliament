@@ -179,9 +179,7 @@ app.get("/impact", (req, res) => {
 app.get("/api/impact-stories", async (req, res) => {
   try {
     const impactStoriesPath = path.join(__dirname, "../data/impact.json");
-    console.log("dirname: ", __dirname);
 
-    // Check if file exists
     try {
       await fs.access(impactStoriesPath);
     } catch (error) {
@@ -189,11 +187,9 @@ app.get("/api/impact-stories", async (req, res) => {
       return res.status(404).json({ error: "Impact stories file not found" });
     }
 
-    // Read and parse the file
     const fileContent = await fs.readFile(impactStoriesPath, "utf8");
     const impactStories = JSON.parse(fileContent);
 
-    // Validate the data structure
     if (!impactStories || !Array.isArray(impactStories.impact_stories)) {
       console.error("Invalid impact stories data structure");
       return res
@@ -216,7 +212,6 @@ app.get("/api/gallery-data", async (req, res) => {
       "../public/data/gallery-data.json"
     );
 
-    // Check if file exists
     try {
       await fs.access(galleryDataPath);
     } catch (error) {
@@ -224,11 +219,9 @@ app.get("/api/gallery-data", async (req, res) => {
       return res.status(404).json({ error: "Gallery data file not found" });
     }
 
-    // Read and parse the file
     const fileContent = await fs.readFile(galleryDataPath, "utf8");
     const galleryData = JSON.parse(fileContent);
 
-    // Validate the data structure
     if (!galleryData || !Array.isArray(galleryData.galleryItems)) {
       console.error("Invalid gallery data structure");
       return res.status(500).json({ error: "Invalid gallery data structure" });
