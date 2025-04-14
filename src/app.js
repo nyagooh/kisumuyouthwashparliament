@@ -175,6 +175,10 @@ app.get("/impact", (req, res) => {
   res.sendFile(path.join(__dirname, "../public/pages/impact.html"));
 });
 
+app.get("/gallery", (req, res) => {
+  res.sendFile(path.join(__dirname, "../public/pages/gallery.html"));
+});
+
 // Endpoint to fetch impact stories
 app.get("/api/impact-stories", async (req, res) => {
   try {
