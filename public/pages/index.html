@@ -36,22 +36,39 @@
                 <img src="images/youthwashlogo.jpg" alt="KYWP Logo" class="h-16 mdlh-20">
             </div>
             <div class="hidden md:flex space-x-8">
-                <a href="index.html" class="text-text hover:text-secondary transition-colors duration-300">Home</a>
-                <a href="about.html" class="text-text hover:text-secondary transition-colors duration-300">About</a>
-                <a href="impact.html" class="text-text hover:text-secondary transition-colors duration-300">Impact</a>
-                <a href="gallery.html" class="text-text hover:text-secondary transition-colors duration-300">Gallery</a>
-                <a href="contact.html" class="text-text hover:text-secondary transition-colors duration-300">Contact</a>
+                <a href="/index" class="text-text hover:text-secondary transition-colors duration-300">Home</a>
+                <div class="relative group">
+                    <a href="/about" class="text-text hover:text-secondary transition-colors duration-300 flex items-center">About <i class="fas fa-chevron-down ml-1 text-xs"></i></a>
+                    <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md overflow-hidden z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 origin-top-left">
+                        <a href="/about" class="block px-4 py-2 text-sm text-text hover:bg-primary hover:text-white transition-colors duration-200">Overview</a>
+                        <a href="/scope" class="block px-4 py-2 text-sm text-text hover:bg-primary hover:text-white transition-colors duration-200">Our Scope</a>
+                        <a href="/thematic-areas" class="block px-4 py-2 text-sm text-text hover:bg-primary hover:text-white transition-colors duration-200">Thematic Areas</a>
+                    </div>
+                </div>
+                <a href="/impact" class="text-text hover:text-secondary transition-colors duration-300">Impact</a>
+                <a href="/gallery" class="text-text hover:text-secondary transition-colors duration-300">Gallery</a>
+                <a href="/contact" class="text-text hover:text-secondary transition-colors duration-300">Contact</a>
             </div>
             <a href="#donate" class="hidden md:inline-block px-6 py-2 bg-secondary text-white rounded-md hover:bg-secondary/80 transition-all duration-300 hover:-translate-y-0.5">Donate</a>
             <button class="md:hidden text-text hover:text-primary">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
             <div class="absolute top-full left-0 right-0 bg-white shadow-lg hidden flex-col nav-links">
-                <a href="index.html" class="block text-text hover:text-secondary transition-colors duration-300 p-4">Home</a>
-                <a href="about.html" class="block text-text hover:text-secondary transition-colors duration-300 p-4">About</a>
-                <a href="impact.html" class="block text-text hover:text-secondary transition-colors duration-300 p-4">Impact</a>
-                <a href="gallery.html" class="block text-text hover:text-secondary transition-colors duration-300 p-4">Gallery</a>
-                <a href="contact.html" class="block text-text hover:text-secondary transition-colors duration-300 p-4">Contact</a>
+                <a href="/index" class="block text-text hover:text-secondary transition-colors duration-300 p-4">Home</a>
+                <div class="mobile-dropdown">
+                    <div class="flex justify-between items-center p-4 text-text hover:text-secondary transition-colors duration-300">
+                        <a href="/about" class="block">About</a>
+                        <button class="mobile-dropdown-toggle"><i class="fas fa-chevron-down text-xs"></i></button>
+                    </div>
+                    <div class="mobile-dropdown-content hidden pl-4 bg-gray-50">
+                        <a href="/about" class="block text-text hover:text-secondary transition-colors duration-300 p-4">Overview</a>
+                        <a href="/scope" class="block text-text hover:text-secondary transition-colors duration-300 p-4">Our Scope</a>
+                        <a href="/thematic-areas" class="block text-text hover:text-secondary transition-colors duration-300 p-4">Thematic Areas</a>
+                    </div>
+                </div>
+                <a href="/impact" class="block text-text hover:text-secondary transition-colors duration-300 p-4">Impact</a>
+                <a href="/gallery" class="block text-text hover:text-secondary transition-colors duration-300 p-4">Gallery</a>
+                <a href="/contact" class="block text-text hover:text-secondary transition-colors duration-300 p-4">Contact</a>
             </div>
         </nav>
     </header>
@@ -775,6 +792,17 @@ l                              <span class="text-gray-600">Kisumu, Kenya</span>
             } else {
                 console.error('Mobile menu elements not found');
             }
+            
+            // Mobile dropdown functionality
+            const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+            mobileDropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const dropdownContent = this.closest('.mobile-dropdown').querySelector('.mobile-dropdown-content');
+                    dropdownContent.classList.toggle('hidden');
+                    this.querySelector('i').classList.toggle('fa-chevron-down');
+                    this.querySelector('i').classList.toggle('fa-chevron-up');
+                });
+            });
         });
     </script>
 </body>
