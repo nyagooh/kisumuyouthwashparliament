@@ -179,6 +179,10 @@ app.get("/gallery", (req, res) => {
   res.sendFile(path.join(__dirname, "../public/pages/gallery.html"));
 });
 
+app.get("/gallery", (req, res) => {
+  res.sendFile(path.join(__dirname, "../public/pages/gallery.html"));
+});
+
 app.get("/scope", (req, res) => {
   res.sendFile(path.join(__dirname, "../public/pages/scope.html"));
 });
