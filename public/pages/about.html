@@ -36,22 +36,39 @@
                 <img src="images/youthwashlogo.jpg" alt="KYWP Logo" class="h-16 md:h-20">
             </div>
             <div class="hidden md:flex space-x-8">
-                <a href="index" class="text-text hover:text-secondary transition-colors duration-300">Home</a>
-                <a href="about" class="text-text hover:text-secondary transition-colors duration-300">About</a>
-                <a href="impact" class="text-text hover:text-secondary transition-colors duration-300">Impact</a>
-                <a href="gallery" class="text-text hover:text-secondary transition-colors duration-300">Gallery</a>
-                <a href="contact" class="text-text hover:text-secondary transition-colors duration-300">Contact</a>
+                <a href="/index" class="text-text hover:text-secondary transition-colors duration-300">Home</a>
+                <div class="relative group">
+                    <a href="/about" class="text-text hover:text-secondary transition-colors duration-300 flex items-center">About <i class="fas fa-chevron-down ml-1 text-xs"></i></a>
+                    <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md overflow-hidden z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 origin-top-left">
+                        <a href="/about" class="block px-4 py-2 text-sm text-text hover:bg-primary hover:text-white transition-colors duration-200">Overview</a>
+                        <a href="/scope" class="block px-4 py-2 text-sm text-text hover:bg-primary hover:text-white transition-colors duration-200">Our Scope</a>
+                        <a href="/thematic-areas" class="block px-4 py-2 text-sm text-text hover:bg-primary hover:text-white transition-colors duration-200">Thematic Areas</a>
+                    </div>
+                </div>
+                <a href="/impact" class="text-text hover:text-secondary transition-colors duration-300">Impact</a>
+                <a href="/gallery" class="text-text hover:text-secondary transition-colors duration-300">Gallery</a>
+                <a href="/contact" class="text-text hover:text-secondary transition-colors duration-300">Contact</a>
             </div>
             <a href="#donate" class="hidden md:inline-block px-6 py-2 bg-secondary text-white rounded-md hover:bg-secondary/80 transition-all duration-300 hover:-translate-y-0.5">Donate</a>
             <button class="md:hidden text-text hover:text-primary">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
             <div class="absolute top-full left-0 right-0 bg-white shadow-lg hidden flex-col nav-links">
-                <a href="index" class="block text-text hover:text-secondary transition-colors duration-300 p-4">Home</a>
-                <a href="about" class="block text-text hover:text-secondary transition-colors duration-300 p-4">About</a>
-                <a href="impact" class="block text-text hover:text-secondary transition-colors duration-300 p-4">Impact</a>
-                <a href="gallery" class="block text-text hover:text-secondary transition-colors duration-300 p-4">Gallery</a>
-                <a href="contact" class="block text-text hover:text-secondary transition-colors duration-300 p-4">Contact</a>
+                <a href="/index" class="block text-text hover:text-secondary transition-colors duration-300 p-4">Home</a>
+                <div class="mobile-dropdown">
+                    <div class="flex justify-between items-center p-4 text-text hover:text-secondary transition-colors duration-300">
+                        <a href="/about" class="block">About</a>
+                        <button class="mobile-dropdown-toggle"><i class="fas fa-chevron-down text-xs"></i></button>
+                    </div>
+                    <div class="mobile-dropdown-content hidden pl-4 bg-gray-50">
+                        <a href="/about" class="block text-text hover:text-secondary transition-colors duration-300 p-4">Overview</a>
+                        <a href="/scope" class="block text-text hover:text-secondary transition-colors duration-300 p-4">Our Scope</a>
+                        <a href="/thematic-areas" class="block text-text hover:text-secondary transition-colors duration-300 p-4">Thematic Areas</a>
+                    </div>
+                </div>
+                <a href="/impact" class="block text-text hover:text-secondary transition-colors duration-300 p-4">Impact</a>
+                <a href="/gallery" class="block text-text hover:text-secondary transition-colors duration-300 p-4">Gallery</a>
+                <a href="/contact" class="block text-text hover:text-secondary transition-colors duration-300 p-4">Contact</a>
             </div>
         </nav>
     </header>
@@ -59,7 +76,7 @@
     <section class="relative bg-cover bg-center text-white py-48 pt-32 overflow-hidden">
         <!-- Water Background Images -->
         <div class="absolute inset-0 z-0">
-            <img src="images/wash23.jpg" alt="Water Background" class="absolute inset-0 w-full h-full object-cover" />
+            <img src="/images/Journey of Water-20250521T093322Z-1-001/Journey of Water/476461948_122220157634223163_7512114379123085557_n.jpg" alt="Water Background" class="absolute inset-0 w-full h-auto object-cover" />
             <!-- Lighter overlay -->
             <div class="absolute inset-0 bg-secondary/30
             "></div>
@@ -83,17 +100,17 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div class="bg-white rounded-lg shadow-lg p-8">
                     <h3 class="text-2xl font-bold text-secondary mb-4">Our Mission</h3>
-                    <p class="text-gray-600 mb-4">To empower youth to take action on water, sanitation, and hygiene issues in their communities.</p>
+                    <p class="text-gray-600 mb-4">To advocate for and implement youth-led sustainable WASH initiatives </p>
                 </div>
                 <div>
-                    <img src="images/wash19.jpg" alt="Mission Image" class="w-full h-auto rounded-lg shadow-md">
+                    <img src="/images/National Youth Climate Change and Water Security Innovation Summit-20250514T073446Z-1-001/National Youth Climate Change and Water Security Innovation Summit/pic10.jpg" alt="Mission Image" class="w-full h-auto rounded-lg shadow-md">
                 </div>
                 <div>
-                    <img src="images/wash25.jpg" alt="Vision Image" class="w-full h-auto rounded-lg shadow-md">
+                    <img src="/images/Youth Devolution Festival-20250514T070121Z-1-001/Youth Devolution Festival/487134920_122234538014223163_8831938373834666372_n.jpg" alt="Vision Image" class="w-full h-auto rounded-lg shadow-md">
                 </div>
                 <div class="bg-white rounded-lg shadow-lg p-8">
                     <h3 class="text-2xl font-bold text-secondary mb-4">Our Vision</h3>
-                    <p class="text-gray-600 mb-4">A world where every community has access to clean water and sanitation, led by empowered youth leaders.</p>
+                    <p class="text-gray-600 mb-4">To be the leader in empowering youth to influence sustainable management and access of water, sanitation, and hygiene in Kisumu County.</p>
                 </div>
             </div>
             <section id="core-values" class="py-24 bg-white">
@@ -122,23 +139,41 @@
             <!-- What We Do Section -->
             <!-- Programs Section -->
    <!-- Thematic Areas Section -->
+   <!-- Thematic Areas Section -->
    <section id="thematic-areas" class="py-24 bg-light">
-    <div class="container mx-auto px-6 md:px-12 lg:px-24">
+    <div class="container mx-auto px-4 md:px-6 lg:px-8">
         <div class="text-center mb-16">
             <h2 class="text-4xl font-bold text-primary mb-4">Our Thematic Areas</h2>
             <p class="text-gray text-lg max-w-3xl mx-auto">Our work focuses on these three key thematic areas to create sustainable impact.</p>
         </div>
-        <div class="grid md:grid-cols-3 gap-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
             <!-- Thematic Area 1 -->
-            <div class="bg-white rounded-xl shadow-xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+            <div class="bg-white rounded-xl shadow-xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl w-full">
                 <div class="h-56 overflow-hidden relative">
-                    <img src="images/wash24.jpg" alt="Water Governance" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    <img src="/images/LREB Water Conference 2024-20250514T070105Z-1-001/LREB Water Conference 2024/466102629_17879671095175761_8336939295138500615_n.jpg" alt="Water Governance" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                        <h3 class="text-2xl font-bold text-white p-6">Integrated water resource management</h3>
+                        <h3 class="text-2xl font-bold text-white p-6">Integrated Water Resource Management(IWRM)</h3>
                     </div>
                 </div>
                 <div class="p-6">
-                    <p class="text-gray-600">Promoting effective policies and management systems for sustainable water resources and services.</p>
+                    <p class="text-gray-600">We are promoting IWRM by raising awareness through education and campaigns, 
+                        building local capacity on water governance. collaborate with stakeholders, 
+                        implement water-smart WASH projects, and advocate for inclusive, sustainable water policies. </p>
+                    <div class="mt-4 flex items-center text-primary font-medium">
+                        <span>Learn more</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl w-full">
+                <div class="h-56 overflow-hidden relative">
+                    <img src="/images/Nyakach WASH Outreach-20250514T073354Z-1-001/Nyakach WASH Outreach/20240909_133951.jpg" alt="WASH" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                        <h3 class="text-2xl font-bold text-white p-6">WASH</h3>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <p class="text-gray-600">We implement comprehensive WASH programs, focusing on water supply, sanitation, and hygiene education to improve community health and well-being.</p>
                     <div class="mt-4 flex items-center text-primary font-medium">
                         <span>Learn more</span>
                         <i class="fas fa-arrow-right ml-2"></i>
@@ -146,16 +181,18 @@
                 </div>
             </div>
             
+            
             <!-- Thematic Area 2 -->
-            <div class="bg-white rounded-xl shadow-xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+            <div class="bg-white rounded-xl shadow-xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl w-full">
                 <div class="h-56 overflow-hidden relative">
-                    <img src="images/wash3.jpg" alt="WASH Services" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    <img src="/images/Wetlands Day 2025-20250514T073103Z-1-001/Wetlands Day 2025/475637320_17890781298175761_5431133997526744439_n.jpg" alt="Climate Action" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                        <h3 class="text-2xl font-bold text-white p-6">Waste management </h3>
+                        <h3 class="text-2xl font-bold text-white p-6">Climate Action</h3>
                     </div>
                 </div>
                 <div class="p-6">
-                    <p class="text-gray-600">Ensuring accessible and proper waste disposal, sanitation, and hygiene services for all communities.</p>
+                    <p class="text-gray-600">We are promoting climate action by raising awareness on climate change, empowering communities with adaptation strategies, engaging youth in climate-smart initiatives,
+                        and advocating for policies that build resilience and environmental sustainability.</p>
                     <div class="mt-4 flex items-center text-primary font-medium">
                         <span>Learn more</span>
                         <i class="fas fa-arrow-right ml-2"></i>
@@ -166,19 +203,38 @@
             <!-- Thematic Area 3 -->
             <div class="bg-white rounded-xl shadow-xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
                 <div class="h-56 overflow-hidden relative">
-                    <img src="images/kiwasko/kiwak.jpg" alt="Youth Empowerment" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                    <img src="/images/LREB Water Conference 2024-20250514T070105Z-1-001/LREB Water Conference 2024/465965726_17879671086175761_5795201378709181754_n.jpg" alt="Youth Empowerment" class=lw-full h-full object-cover transition-transform duration-500 hover:scale-110">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                        <h3 class="text-2xl font-bold text-white p-6">Climate change and environmental protection.</h3>
+                        <h3 class="text-2xl font-bold text-white p-6">Research and Innovation</h3>
                     </div>
                 </div>
                 <div class="p-6">
-                    <p class="text-gray-600">Promoting sustainable practices and policies to protect the environment and address climate change.</p>
+                    <p class="text-gray-600">We leverage innovation and research  by developing sustainable, low-cost technologies, using data and evidence to inform solutions, engaging communities in co-creating ideas, 
+                        and collaborating with institutions to scale impactful sanitation and hygiene initiatives.</p>
                     <div class="mt-4 flex items-center text-primary font-medium">
                         <span>Learn more</span>
                         <i class="fas fa-arrow-right ml-2"></i>
                     </div>
                 </div>
             </div>
+                   <!-- Thematic Area 2 -->
+                   <div class="bg-white rounded-xl shadow-xl overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="/images/Kibos WASH School Outreach-20250514T070053Z-1-001/Kibos WASH School Outreach/487241124_122235110342223163_1048789190591448670_n.jpg" alt="Climate Action" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                            <h3 class="text-2xl font-bold text-white p-6">Waste Management</h3>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600">We are advancing waste management by educating communities on proper waste disposal,
+                             supporting clean-up drives and recycling initiatives, promoting circular economy practices, and advocating for sustainable urban and rural sanitation policies.</p>
+                        <div class="mt-4 flex items-center text-primary font-medium">
+                            <span>Learn more</span>
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+                </div>
+                
         </div>
     </div>
 </section>
@@ -422,6 +478,17 @@
             } else {
                 console.error('Mobile menu elements not found');
             }
+            
+            // Mobile dropdown functionality
+            const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+            mobileDropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const dropdownContent = this.closest('.mobile-dropdown').querySelector('.mobile-dropdown-content');
+                    dropdownContent.classList.toggle('hidden');
+                    this.querySelector('i').classList.toggle('fa-chevron-down');
+                    this.querySelector('i').classList.toggle('fa-chevron-up');
+                });
+            });
         </script>
 </body>
 </html>

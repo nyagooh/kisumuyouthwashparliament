@@ -1,0 +1,16 @@
+RewriteEngine On
+
+# If the requested resource doesn't exist as a file or directory
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite clean URLs to their HTML versions
+RewriteRule ^([^/]+)/?$ $1.html [L]
+
+# Handle the case where the URL ends with a trailing slash
+RewriteRule ^([^/]+)/$ $1.html [L]
+
+# Prevent accessing the .html files directly to maintain clean URLs
+# Redirect example.html to example
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.html [NC]
+RewriteRule ^ %1 [R=301,L]

@@ -179,6 +179,18 @@ app.get("/gallery", (req, res) => {
   res.sendFile(path.join(__dirname, "../public/pages/gallery.html"));
 });
 
+app.get("/gallery", (req, res) => {
+  res.sendFile(path.join(__dirname, "../public/pages/gallery.html"));
+});
+
+app.get("/scope", (req, res) => {
+  res.sendFile(path.join(__dirname, "../public/pages/scope.html"));
+});
+
+app.get("/thematic-areas", (req, res) => {
+  res.sendFile(path.join(__dirname, "../public/pages/thematic-areas.html"));
+});
+
 // Endpoint to fetch impact stories
 app.get("/api/impact-stories", async (req, res) => {
   try {
