@@ -10,55 +10,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../js/events.js" defer></script>
     <script>
-        // Wait for the DOM to be fully loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            // Get all filter buttons and gallery items
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const galleryItems = document.querySelectorAll('#gallery-grid > div');
-            
-            // Add click event listeners to each filter button
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Remove active class from all buttons
-                    filterButtons.forEach(btn => {
-                        btn.classList.remove('bg-primary', 'text-white');
-                        btn.classList.add('bg-gray-100', 'text-gray-700');
-                    });
-                    
-                    // Add active class to clicked button
-                    this.classList.remove('bg-gray-100', 'text-gray-700');
-                    this.classList.add('bg-primary', 'text-white');
-                    
-                    // Get the filter value
-                    const filterValue = this.getAttribute('data-filter');
-                    
-                    // Filter gallery items
-                    galleryItems.forEach(item => {
-                        const img = item.querySelector('img');
-                        const category = img ? img.getAttribute('data-category') : null;
-                        
-                        if (filterValue === 'all' || category === filterValue) {
-                            // Show items that match the filter
-                            item.style.display = 'block';
-                            // Add animation classes
-                            setTimeout(() => {
-                                item.style.opacity = '1';
-                                item.style.transform = 'translateY(0)';
-                            }, 50);
-                        } else {
-                            // Hide items that don't match
-                            item.style.opacity = '0';
-                            item.style.transform = 'translateY(20px)';
-                            setTimeout(() => {
-                                item.style.display = 'none';
-                            }, 300);
-                        }
-                    });
-                });
-            });
-        });
-    </script>
-    <script>
         tailwind.config = {
             theme: {
                 extend: {
@@ -430,8 +381,8 @@
                
         </div>
     </section>
- 
    
+    
 
 <section class="py-12 bg-gradient-to-r from-primary to-secondary text-white relative overflow-hidden">
     <!-- Background Pattern -->
